@@ -1,0 +1,26 @@
+package Objetos;
+
+public class Racional {
+	private int numerador;
+	private int denominador;
+
+	public void setDatos(int num, int den) {
+		numerador = num;
+		if(den == 0) {
+			den = 1; //EL denominador no puede ser 0
+		}
+		denominador = den;
+	}
+	
+	public void getRacional() {
+		System.out.println(numerador + " / " + denominador);
+	}
+	
+	public static void main(String[] args) {
+		Racional resultado = new Racional();
+		resultado.setDatos(12, 7);
+		resultado.getRacional();
+	}
+}
+
+

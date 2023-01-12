@@ -1,0 +1,25 @@
+
+public class Gastos {
+	
+	public void main(String[] args) {
+		System.out.println(234);
+//		Gastos gastos = new Gastos();
+//
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("Los datos serán introducidos en euros(true) o dolares(false)?");
+//		gastos.setEstaEnEuros(sc.nextBoolean());
+//		System.out.println("Tipo de cambio: ");
+//		gastos.setTipoCambio(sc.nextFloat());
+//		System.out.print("Gastos alimentacion: ");
+//		gastos.setGastosAlimentación(sc.nextFloat());
+//		System.out.print("Gastos transportes: ");
+//		gastos.setGastosTransporte(sc.nextFloat());
+//		System.out.print("Gastos vivienda: ");
+//		gastos.setGastosVivienda(sc.nextFloat());
+//		sc.close();
+//
+//		System.out.println("Total gastos en euros: " + gastos.obtenerTotalEuros() + " €");
+//		System.out.println("Total gastos en dolares: " + gastos.obtenerTotalDolares() + " $");
+
+	}
+}

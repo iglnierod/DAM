@@ -1,0 +1,11 @@
+#parrafo1{
+    color: indigo;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: right;
+}
+
+p{
+    color:rebeccapurple;
+    font-size:200%;
+    text-align: left;
+}

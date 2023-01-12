@@ -1,0 +1,21 @@
+package Arrays.Extras;
+import java.util.Scanner;
+public class Ej4 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Introduzca la longitud de la contraseña: ");
+		int longitud = sc.nextInt();
+		sc.close();
+		
+		String[] caracteres = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W',
+							'X','Y','Z'};
+		System.out.print("{");
+		for(int i = 0; i < caracteres.length; i++) {
+			System.out.print("'"+caracteres[i].toLowerCase()+"',");
+		}
+		System.out.println("};");
+	}
+
+}

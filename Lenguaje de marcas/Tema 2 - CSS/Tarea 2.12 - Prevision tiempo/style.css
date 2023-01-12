@@ -1,0 +1,173 @@
+/*GOOGLE ICONS ROUNDED*/
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+
+/*FONTS*/
+/*Raleway*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+/*Roboto Mono*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: rgb(82, 82, 82);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 925px;
+}
+
+.wrap{
+    border: 2px solid white;
+    border-radius: 25px;
+}
+
+.wrap header{
+    background-color: #f5f5f5;
+    color: black;
+    font-family: 'Roboto Mono',Arial, Helvetica, sans-serif;
+    padding: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+}
+
+.wrap section.space{
+    width: 350px;
+    min-width: 100px;
+}
+
+.wrap ul{
+    margin-top: 5px;
+    width: 150px;
+    list-style: none;
+    display: inline-flex;
+    gap: 20px;
+    vertical-align: sub;
+}
+
+.wrap ul li a{
+    padding: 13px 21px;
+    border-radius: 30px;
+    border: 2px solid #f5f5f5;
+}
+
+.wrap ul li.instagram a{
+    background: url('img/redes-sociales2.png') -7px -5px;
+}
+
+.wrap ul li.twitter a{
+    background: url('img/redes-sociales2.png') -7px -62px;
+}
+
+.wrap ul li.mail a{
+    background: url('img/redes-sociales2.png') -66px -179px;
+}
+
+.wrap ul li a:hover{
+    border: 2px solid black;
+    transition: 0.5s;
+}
+
+.wrap table{
+    padding: 30px;
+    font-family: 'Quicksand',Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    /*background: linear-gradient(to bottom, #6a0d83, #ce4993, #ee5d6c, #fb9062, #eeaf61);*/
+    background-color: rgb(112, 112, 112);
+    border-radius: 25px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.wrap table td{
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    vertical-align: text-bottom;
+    border-radius: 10px;
+}
+
+.wrap table tr.tr-margin{
+    height: 20px;
+}
+
+.wrap table tr td.td-margin{
+    width: 18px;
+}
+
+.wrap table td h1{
+    margin: 10px 0;
+}
+
+.wrap table td section.tiempo{
+    width: 192px;
+    height: 192px;
+    margin: 0 auto;
+    background: url('img/iconos-tiempo-blancos.png')
+}
+
+.wrap table td section.nubes{
+    background-position: -386px -193px;
+}
+
+.wrap table td section.solnube{
+    background-position: -386px 0;
+}
+
+.wrap table td section.solnubes{
+    background-position: -578px -192.8px;
+}
+
+.wrap table td section.lluvia{
+    background-position: -2px -385px;
+}
+
+.wrap table td section.tormenta{
+    background-position: -771px 0;
+}
+
+.wrap table td section.nubeviento{
+    background-position: -772px -385px;
+}
+
+.wrap table td section.nieve{
+    background-position: -2px -769px ;
+}
+
+.wrap table td.nubes{
+    background-color: #60b4e2;
+}
+
+.wrap table td.solnube{
+    background-color: #2482b6;
+}
+
+.wrap table td.solnubes{
+    background-color: #8ad5fe;
+}
+
+.wrap table td.lluvia{
+    background-color: #1d8cc8;
+}
+
+.wrap table td.tormenta{
+    background-color: #4fb8f1;
+}
+
+.wrap table td.nubeviento{
+    background-color: #0070ae;
+}
+
+.wrap table td.nieve{
+    background-color: #319edb;
+}

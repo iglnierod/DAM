@@ -1,0 +1,10 @@
+Reconocer componentes (ME)
+4 Preguntas - Proceso posta en marcha dun computador (64)
+BIOS (significado), cuando se inicia BIOS(al encender/apagar), para que es la POST.
+Generaciones
+RAM (datos y instrucciones)
+Velocidades SATA
+Que soporta un conector M2 (sata lll, pci express, usb3)
+ponte norte / ponte sur
+que es un chipset
+

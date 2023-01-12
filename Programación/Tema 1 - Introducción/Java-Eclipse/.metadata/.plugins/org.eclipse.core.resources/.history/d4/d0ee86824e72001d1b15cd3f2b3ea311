@@ -1,0 +1,8 @@
+package Strings;
+import java.util.Scanner;
+public class Dual2 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Introduzca el numero de piezas");
+	}
+}

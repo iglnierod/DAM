@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+
+public class Gastos {
+	private float gastosAlimentacion;
+	private float gastosTransportes;
+	private float gastosVivienda;
+	private boolean gastosEnEuros;
+	private float tipoCambio;
+
+	public Gastos() {
+	}
+
+	// Setters
+
+	public void setGastosAlimentación(float cantidad) {
+		this.gastosAlimentacion = cantidad;
+	}
+
+	public void setGastosTransporte(float cantidad) {
+		this.gastosTransportes = cantidad;
+	}
+
+	public void setGastosVivienda(float cantidad) {
+		this.gastosVivienda = cantidad;
+	}
+
+	public void setTipoCambio(float nuevoValor) {
+		this.tipoCambio = nuevoValor;
+	}
+
+	public void setEstaEnEuros(boolean moneda) {
+		this.gastosEnEuros = moneda;
+	}
+
+	public boolean estaEnEuros() {
+		return gastosEnEuros;
+	}
+
+	public void eliminarTodosLosGastos() {
+		this.gastosAlimentacion = 0;
+		this.gastosTransportes = 0;
+		this.gastosVivienda = 0;
+	}
+
+	public float obtenerTotalEuros() {
+		if (gastosEnEuros) {
+			return gastosAlimentacion + gastosTransportes + gastosVivienda;
+		}
+		return (gastosAlimentacion + gastosTransportes + gastosVivienda) / tipoCambio;
+
+	}
+
+	public float obtenerTotalDolares() {
+		if (!gastosEnEuros) {
+			return gastosAlimentacion + gastosTransportes + gastosVivienda;
+		}
+		return (gastosAlimentacion + gastosTransportes + gastosVivienda) * tipoCambio;
+	}
+
+	public void main(String[] args) {
+		System.out.println(234);
+
+	}
+}

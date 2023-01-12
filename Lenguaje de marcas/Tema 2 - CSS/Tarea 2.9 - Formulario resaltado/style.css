@@ -1,0 +1,50 @@
+html{
+    background-color: #c9c9c9;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form{
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+input{
+    width: 500px;
+}
+
+label{
+    display: inline-flex;
+    width: 100px;
+}
+
+input[name^="f"]{
+    border-width: 2px;
+}
+
+input[type="text"]{
+    border-style: dotted;
+}
+
+input:focus{
+    border: 5px solid green;
+}
+
+input:disabled{
+    background-color: black;
+}
+
+input[type="submit"]{
+    width: 75px;
+    height: 75px;
+}
+
+input:required:empty{
+    background-color: rgba(256, 0, 0, 0.4);
+}
+
+button{
+    width: 75px;
+}
+

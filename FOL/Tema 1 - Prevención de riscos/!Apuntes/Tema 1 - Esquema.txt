@@ -1,0 +1,8 @@
+FACTORES DE RISCO:							DANOS				TECNICAS PREVENCION
+condiciones de seguridad [ equipos de traballo, lugares de traballo]-> AT				seguridad
+condiciones mediambientales [axentes fisicos, quimicos e bioloxicos]->Enfermedad			hixiene industrial
+condiciones ergonomicas [carga fisica o mental]			    -> Fatiga				ergonomia
+condiciones psicosociales [organización do traballo e caracteristicas personales]->Insatisfacción	psicosocioloxia
+
+
+

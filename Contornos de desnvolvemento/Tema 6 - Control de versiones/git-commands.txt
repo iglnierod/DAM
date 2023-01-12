@@ -1,0 +1,6 @@
+git init //Inicia git(crea carpeta no visible)
+git status //Comprueba status
+git add .(todo)/file-name //Añade archivos a un seguimiento
+git commit -m "mensaje descriptivo"
+git branch -M "Main" //Rename branch
+git remote add origin url

@@ -1,0 +1,62 @@
+package cajeroAutomatico;
+
+import java.util.Scanner;
+
+public class Cajero {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int opcion;
+		Cuenta cuenta = null;
+		boolean cuentaCreada = false;
+		do {
+			System.out.println("\n1.- Crear cuenta vacía.");
+			System.out.println("2.- Crear cuenta con saldo inicial");
+			System.out.println("3.- Ingresar dinero");
+			System.out.println("4.- Sacar dinero");
+			System.out.println("5.- Ver saldo");
+			System.out.println("6.- Salir");
+
+			opcion = sc.nextInt();
+			switch (opcion) {
+			case 1:
+				cuenta = new Cuenta();
+				cuentaCreada = true;
+				System.out.println("Cuenta creada.");
+				break;
+			case 2:
+				System.out.println("¿Cuanto saldo deseas iniciar la cuenta?");
+				int saldoInicial = sc.nextInt();
+				cuenta = new Cuenta(saldoInicial);
+				cuentaCreada = true;
+				break;
+			case 3:
+				if(cuentaCreada) {
+					System.out.println("¿Cuánto desea ingresar?");
+					cuenta.ingresar(sc.nextFloat());
+					break;
+				}
+				System.err.println("ERROR");
+				System.err.println("No se ha creado una cuenta.");
+			case 4:
+				if(cuentaCreada) {
+					System.out.println("¿Cuanto desea retirar?");
+					cuenta.extraer(sc.nextFloat());
+					break;
+				}
+				System.err.println("ERROR");
+				System.err.println("No se ha creado una cuenta.");
+			case 5:
+				System.out.println("El saldo de la cuenta es: " + cuenta.getSaldo() + " €");
+				break;
+			case 6:
+				System.out.println("Saliendo..");
+				break;
+			default:
+				System.err.println("Introduzca un número válido.");
+			}
+		} while (opcion != 6);
+		sc.close();
+	}
+
+}

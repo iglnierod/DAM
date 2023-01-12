@@ -1,0 +1,69 @@
+
+public class Triangulo {
+	private Punto vertice1;
+	private Punto vertice2;
+	private Punto vertice3;
+
+	// Constructor
+	public Triangulo() {
+
+	}
+
+	// Getters & Setters
+
+
+	// Métodos
+	public void representar() {
+		System.out.println("El vertice 1 es: (" + vertice1.getX() + ", " + vertice1.getY() + ")");
+		System.out.println("El vertice 2 es: (" + vertice2.getX() + ", " + vertice2.getY() + ")");
+		System.out.println("El vertice 3 es: (" + vertice3.getX() + ", " + vertice3.getY() + ")");
+	}
+
+	public Punto getVertice1() {
+		return vertice1;
+	}
+
+	public void setVertice1(Punto vertice1) {
+		this.vertice1 = vertice1;
+	}
+
+	public Punto getVertice2() {
+		return vertice2;
+	}
+
+	public void setVertice2(Punto vertice2) {
+		this.vertice2 = vertice2;
+	}
+
+	public Punto getVertice3() {
+		return vertice3;
+	}
+
+	public void setVertice3(Punto vertice3) {
+		this.vertice3 = vertice3;
+	}
+
+	//Main
+	public static void main(String[] args) {
+		Triangulo triangulo = new Triangulo();
+		triangulo.setVertice1(0,0);
+	}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

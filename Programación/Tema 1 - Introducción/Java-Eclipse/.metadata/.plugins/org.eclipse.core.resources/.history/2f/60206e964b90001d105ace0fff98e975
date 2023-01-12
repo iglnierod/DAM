@@ -1,0 +1,5 @@
+package documentos.gestion_economica;
+
+public class Factura {
+
+}

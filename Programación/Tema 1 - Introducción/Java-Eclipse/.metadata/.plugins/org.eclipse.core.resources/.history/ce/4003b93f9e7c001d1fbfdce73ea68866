@@ -1,0 +1,6 @@
+
+public class Sumador {
+	public int calcularSuma(int a, int b) {
+		return a + b;
+	}
+}

@@ -1,0 +1,12 @@
+package Objetos;
+
+public class RectanguloTexto {
+	int base;
+	int altura;
+	
+	public static void main(String[] args) {
+		RectanguloTexto rt = new RectanguloTexto();
+		
+		System.out.println(rt.base);
+	}
+}

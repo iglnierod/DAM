@@ -1,0 +1,36 @@
+package Objetos;
+
+public class EscalaTemperatura {
+	final static int limiteInferior = -30;
+	final static int limiteSuperior = 100;
+	final static int incremento = 6;
+	public static void main(String[] args) {
+		Temperatura t = new Temperatura();
+		int gradosC = limiteInferior;
+		float gradosF = 0;
+		
+		while(gradosC <= limiteSuperior) {
+			t.setCentigrados(gradosC);
+			gradosF = t.getFarenheit();
+			System.out.println(gradosC + "ºC ---> " + gradosF + "ºF");
+			
+			gradosC += incremento;
+		}
+	}
+}
+
+class Temperatura{
+	private float gradosCentigrados;
+	
+	public void setCentigrados(float grados) {
+		gradosCentigrados = grados;
+	}
+	
+	public float getCentigrados() {
+		return gradosCentigrados;
+	}
+	
+	public float getFarenheit() {
+		return 9/5f * gradosCentigrados + 32;
+	}
+}

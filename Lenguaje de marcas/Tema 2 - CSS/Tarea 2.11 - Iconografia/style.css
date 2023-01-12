@@ -1,0 +1,125 @@
+/*  Patua One   */
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+
+/*  Comfortaa   */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+
+/*  AWESOME ICONS*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/*  GOOGLE ICONS*/
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Round");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Comfortaa',cursive;
+    font-size: 20px;
+}
+
+.wrap{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236, 236, 236);
+    max-width: 2500px;
+}
+
+section[class^=hotel] {
+    width: 30%;
+    background-color: rgb(212, 212, 212);
+    border-radius: 20px;
+    margin: 10px 35px;
+    height: 910px;
+    cursor: pointer;
+}
+section[class^=hotel]:hover {
+    box-shadow: 0px 0px 32px 4px rgba(74,74,74,0.75);
+}
+
+section[class^=image] {
+    background-position: center;
+    background-size: cover;
+    width: 95%;
+    height: 50%;
+    margin: 15px;
+    border-radius: 20px;
+    min-width: 500px;
+    max-height: 500px;
+}
+
+.image1 {
+    background-image: url(img/hotel1.jpg);
+}
+
+.image2 {
+    background-image: url(img/hotel2.png);
+}
+
+.image3 {
+    background-image: url(img/hotel3.jpg);
+}
+
+section h1{
+    font-family: 'Patua One';
+    font-weight: lighter;
+    font-size: 2.5rem;
+    margin: 15px;
+}
+
+section p{
+    font-family: 'Comfortaa';
+    font-size: 1em;
+    margin: 15px;
+}
+
+.valoraciones{
+    display: flex;
+    justify-content: center;
+}
+
+.valoraciones ul{
+    list-style: none;
+    margin: 15px 30px;
+}
+
+.valoraciones ul li{
+    line-height: 30px;
+}
+
+.valoraciones ul li span.material-icons-round{
+    vertical-align: sub;
+    font-size: 30px;
+}
+
+.valoraciones ul span#valoraciones{
+    text-align: right;
+    margin: 1px solid blue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;    
+}
+
+
+.total{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.total h4{
+    border: 2px solid black;
+    width: fit-content;
+    padding: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    border-radius: 100px;
+}
+
+
+
+

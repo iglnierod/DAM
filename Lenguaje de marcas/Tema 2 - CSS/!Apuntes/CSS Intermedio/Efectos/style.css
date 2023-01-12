@@ -1,0 +1,50 @@
+html{
+    background-color: #c9c9c9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+a:link{
+    color: green;
+}
+
+a:visited{
+    color: lightseagreen;
+}
+
+p:target{
+    border: 2px solid blue;
+    background-color: gold;
+}
+
+button{
+    background-color: tomato;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+button:active{
+    background-color: teal;
+    color: yellowgreen;
+    font-size: 4rem;
+    width: 20rem;
+    height: 10rem;
+}
+
+input:focus{
+    background-color: aquamarine;
+}
+
+button:hover{
+    background-color: blue;
+    color: white;
+}
+
+tr:first-child{
+    background-color: grey;
+}
+
+tr:nth-child(even){
+    background-color: papayawhip;
+}

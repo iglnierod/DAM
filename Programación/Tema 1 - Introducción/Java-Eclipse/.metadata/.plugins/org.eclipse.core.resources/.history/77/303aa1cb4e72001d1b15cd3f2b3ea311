@@ -1,0 +1,37 @@
+package Strings;
+import java.util.Scanner;
+public class Dual2 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Introduzca el numero de piezas: ");
+		int numeroPiezas = sc.nextInt();
+		
+		int[] puzle = new int[numeroPiezas];
+		int[] bolsa = new int[numeroPiezas - 1];
+		
+		for(int i = 0; i < puzle.length; i++) {
+			puzle[i] = i + 1;
+		}
+		int piezasBolsa = 0;
+		System.out.print("Introduzca el numero de la pieza: ");
+		for(int i = 0; i < bolsa.length; i++) {
+			piezasBolsa = sc.nextInt();
+			bolsa[i] = piezasBolsa;
+		}
+		
+		int piezaFalta = 0; 
+		boolean esta;
+		for(int i = 0; i < bolsa.length; i++) {
+			for(int j = 0; j < puzle.length; j++) {
+				if(bolsa[i] == puzle[j]) {
+					esta = true;
+					break;
+				} else {
+					esta = false;
+					piezaFalta = j;
+				}
+			}
+		}
+		System.out.println("La pieza que falta es: " + piezaFalta);
+ 	}
+}

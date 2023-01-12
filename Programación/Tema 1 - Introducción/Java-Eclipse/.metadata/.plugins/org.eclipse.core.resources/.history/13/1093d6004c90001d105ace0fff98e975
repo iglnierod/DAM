@@ -1,0 +1,6 @@
+package documentos.gestion_economica;
+
+public class Factura {
+	private String comprador;
+	private double im
+}

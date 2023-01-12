@@ -1,0 +1,19 @@
+package ClasesEnvoltorio;
+
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class factorial {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Introduzca un numero para hacer el factorial: ");
+		
+		BigInteger factorial = BigInteger.valueOf(sc.nextInt());
+		for(int i = 1; i < factorial; i++) {
+			factorial *= i;
+		}
+		System.out.println(factorial);
+	}
+
+}

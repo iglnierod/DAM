@@ -1,0 +1,23 @@
+package Objetos;
+
+public class RectanguloTexto {
+	private int base;
+	private int altura;
+
+	//Setter
+	public void establecerBase(int valor) {
+		base = valor;
+	}
+	
+	//Getter
+	public int obtenerBase(){
+		return base;
+	}
+	
+	public static void main(String[] args) {
+		RectanguloTexto rt = new RectanguloTexto();
+		
+		rt.establecerBase(4);
+		System.out.println(rt.obtenerBase());
+	}
+}

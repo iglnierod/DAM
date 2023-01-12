@@ -1,0 +1,33 @@
+body{
+    text-justify: auto;
+}
+#p1{
+    font-family: serif,fantasy,monospace;
+    font-size: 20px;
+    color: cadetblue;
+}
+
+#p2{
+    font-family: sans-serif,cursive,monospace;
+    font-size: 25px;
+    color: mediumaquamarine;
+
+}
+
+#p3{
+    font-family: monospace,serif,monospace;
+    font-size: 30px;
+    color: lightseagreen;
+}
+
+#p4{
+    font-family: cursive,sans-serif,monospace;
+    font-size: 35px;
+    color: teal;
+}
+
+#p5{
+    font-family: fantasy,serif,monospace;
+    font-size: 40px;
+    color: darkcyan;
+}

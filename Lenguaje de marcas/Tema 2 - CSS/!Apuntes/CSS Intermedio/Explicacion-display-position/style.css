@@ -1,0 +1,32 @@
+/*.parent{
+    border: 2px dotted black;
+    display: inline-block;
+}
+
+.box{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+#dos{
+    top:20px;
+    left: 20px;
+    background-color: green;
+    position: absolute;
+}*/
+
+/*
+.columna{
+    height: 200px;
+    background-color: steelblue;
+    border: 1px dotted;
+    float: left;
+    width: 33%;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+    overflow: scroll;
+}*/
+

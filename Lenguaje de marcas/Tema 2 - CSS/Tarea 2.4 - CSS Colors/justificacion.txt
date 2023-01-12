@@ -1,0 +1,3 @@
+En esta página utilizo 5 colores diferentes, los principales y los que destacan son los colores con toques dorados. Estos resaltan sobre el fondo negro y se resaltan al rededor de letras blancas.
+El texto blanco se puede leer muy fácilmente sobre el fondo completamente negro y no destaca ya que no es su función. En el texto se destacan las palabras con otro tono de dorado.
+Por último está el botón que tiene el mismo gradient que el titulo de la página.

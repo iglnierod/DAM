@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.function.Function"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+    <fullyQualifiedTypeName name="java.math.BigInteger"/>
+    <fullyQualifiedTypeName name="Objetos.RectanguloTexto"/>
+    <fullyQualifiedTypeName name="Objetos.CuentaBancaria"/>
+    <fullyQualifiedTypeName name="Objetos.Temperatura"/>
+    <fullyQualifiedTypeName name="Objetos.Jugador"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="documentos.gestion_economica.Factura"/>
+    <fullyQualifiedTypeName name="documentos.gestionEconomica.Recibo"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+</qualifiedTypeNameHistroy>

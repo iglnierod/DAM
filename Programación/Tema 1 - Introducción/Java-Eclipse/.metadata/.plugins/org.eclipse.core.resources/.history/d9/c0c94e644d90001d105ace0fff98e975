@@ -1,0 +1,13 @@
+package ImportarPaquetes;
+
+import documentos.gestion_economica.*;
+import documentos.RRHH.*;
+
+public class ImportarPaquetes {
+
+	public static void main(String[] args) {
+		Contrato contrato1 = new Contrato("Alberto", 5);
+		contrato1.imprimirInfo();
+	}
+
+}
