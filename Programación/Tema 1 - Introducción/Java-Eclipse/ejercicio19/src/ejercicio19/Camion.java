@@ -25,4 +25,10 @@ public class Camion extends Vehiculo{
 	public void setNumeroDeEjes(byte numeroDeEjes) {
 		this.numeroDeEjes = numeroDeEjes;
 	}
+	
+	//Metodos
+	@Override
+	public double impuesto() {
+		return getCilindrada() / 30 + getPotencia()	* 30 + getNumRuedas() * 20 + obtenerNumeroDeEjes() * 50;
+	}
 }

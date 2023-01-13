@@ -1,6 +1,6 @@
 package ejercicio19;
 
-public class Vehiculo {
+public abstract class Vehiculo {
 	private String color;
 	private byte numRuedas;
 	private short cilindrada;
@@ -56,4 +56,7 @@ public class Vehiculo {
 	public void setPotencia(short potencia) {
 		this.potencia = potencia;
 	}	
+	
+	//Metodos
+	public abstract double impuesto();
 }

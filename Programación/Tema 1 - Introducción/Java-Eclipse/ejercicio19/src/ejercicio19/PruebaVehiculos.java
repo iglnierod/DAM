@@ -7,10 +7,15 @@ public class PruebaVehiculos {
 		Camion camionNormal = new Camion("Rojo", (byte) 4, (byte) 2, (short) 4000, (short) 300);
 		Camion camionEnorme = new Camion("Rojo", (byte) 12, (byte) 4, (short) 15000, (short) 800);
 		motoBarata.establecerNumeroDePlazas((byte) 2);
-
-		System.out.println("Plazas: " + motoBarata.obtenerNumeroDePlazas());
-		System.out.println("Cilindrada: " + motoBarata.getCilindrada());
-		System.out.println("Nº ejes: " + camionEnorme.obtenerNumeroDeEjes());
+//
+//		System.out.println("Plazas: " + motoBarata.obtenerNumeroDePlazas());
+//		System.out.println("Cilindrada: " + motoBarata.getCilindrada());
+//		System.out.println("Nº ejes: " + camionEnorme.obtenerNumeroDeEjes());
+		
+		System.out.println("Impuesto: " + motoBarata.impuesto());
+	    System.out.println("Impuesto: " + motoCara.impuesto());
+	    System.out.println("Impuesto: " + camionNormal.impuesto());
+	    System.out.println("Impuesto: " + camionEnorme.impuesto());
 	}
 
 }

@@ -29,5 +29,11 @@ public class Motocicleta extends Vehiculo {
 	public void establecerNumeroDePlazas(byte numeroDePlazas) {
 		this.numeroDePlazas = numeroDePlazas;
 	}
+	
+	//Metodos
+		@Override
+		public double impuesto() {
+			return getCilindrada() / 30 + getPotencia() * 30;
+		}
 
 }
