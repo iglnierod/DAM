@@ -1,0 +1,96 @@
+/*FONT*/
+/*Fjalla One*/
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(32, 32, 32);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(231, 231, 231);
+}
+
+.wrap{
+    max-width: 2200px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.parent{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 2200px;
+    height: 100vh;
+}
+
+article[class^="box"]{
+    width: 350px;
+    height: 225px;
+    border-radius: 5px;
+}
+
+article[class^="box"] h3{
+    padding: 8px 15px;
+}
+
+article[class^="box"] h3{
+    font-size: 25px;
+    font-family: 'Fjalla One';    
+    letter-spacing: 2px;
+    font-weight: lighter;
+    color: white;
+}
+
+article[class^="box"] h6{
+    padding: 0px 15px;
+    font-size: 12px;
+    color: rgb(207, 207, 207);
+}
+
+.box{
+    margin: 20px 15px;
+    border: 1px solid white;
+}
+
+.space{
+    height: 150px;
+}
+
+.texto{
+    background-color: rgba(63, 63, 63, 0.904);
+    height: 72px;
+    border-radius: 5px;
+}
+
+.box1{
+    background-image: url('https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2022/11/the-last-of-us-hbo-portada.jpg?resize=1200%2C834&quality=60&strip=all&ssl=1');
+    background-position: center;
+    background-size: contain;
+}
+
+.box2{
+    background-image: url('https://media.gq.com.mx/photos/5ceee4e94dc08817ce9af081/master/pass/chernobyl.jpg');
+    background-size: contain;
+}
+
+.box3{
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/923/620/32/interstellar-movie-wallpaper-preview.jpg');
+    background-size: contain;
+    background-position: center;
+}
+.box4{
+    background-image: url('https://img.hulu.com/user/v3/artwork/2fd691a0-f66b-467f-8635-00d7f151f3d4?base_image_bucket_name=image_manager&base_image=8e90d27c-6e51-46f1-8ab6-c81e2fc0c2ec&region=US&format=jpeg&size=952x536');
+    background-position: center;
+    background-size: contain;
+}
+
+.box5{
+    background-image: url('https://www.joblo.com/wp-content/uploads/2022/06/game-of-thrones-house-of-the-dragon-poster.jpg');
+    background-size: contain;
+}
