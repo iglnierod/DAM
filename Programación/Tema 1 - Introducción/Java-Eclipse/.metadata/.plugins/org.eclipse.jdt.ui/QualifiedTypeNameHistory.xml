@@ -15,4 +15,7 @@
     <fullyQualifiedTypeName name="clasesAbstractas.Circulo"/>
     <fullyQualifiedTypeName name="polimorfismo.Triangulo"/>
     <fullyQualifiedTypeName name="polimorfismo.Circulo"/>
+    <fullyQualifiedTypeName name="intefaces.Triangulo"/>
+    <fullyQualifiedTypeName name="intefaces.OperacionesBasicas"/>
+    <fullyQualifiedTypeName name="intefaces.Rectangulo"/>
 </qualifiedTypeNameHistroy>
