@@ -38,14 +38,32 @@ body{
 }
 
 .portada{
-    width: 440px;
-    height: 270px;
+    width: 420px;
+    height: 220px;
+    transition: tranform;
+    transform-origin: center;
+}
+
+.portada h3{
+    transition: all 0.5s;
 }
 
 .box{
-    width: 440px;
-    height: 240px;
+    width: 420px;
+    height: 220px;
     border-radius: 10px;
+    transition: transform 0.5s;
+    transform-origin: center;
+}
+
+.box:hover{
+    cursor: pointer;
+    transform: scale(1.07);
+}
+
+.portada .box:hover ~  h3{
+    margin-top: 10px;
+    font-size: 25px;
 }
 
 .box1{
