@@ -44,7 +44,7 @@ body{
 .trending,.animated,.drama{
     overflow: auto;
     min-width: 100vh;
-    height: 720px;
+    height: 730px;
     border: 1px solid white;
 }
 
