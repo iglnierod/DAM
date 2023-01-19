@@ -18,4 +18,7 @@
     <fullyQualifiedTypeName name="intefaces.Triangulo"/>
     <fullyQualifiedTypeName name="intefaces.OperacionesBasicas"/>
     <fullyQualifiedTypeName name="intefaces.Rectangulo"/>
+    <fullyQualifiedTypeName name="intefaces2.DatosCentroDeEstudios"/>
+    <fullyQualifiedTypeName name="intefaces2.CalculosCentroDeEstudios"/>
+    <fullyQualifiedTypeName name="intefaces2.ClaseCentroDeEstudios"/>
 </qualifiedTypeNameHistroy>

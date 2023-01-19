@@ -1,6 +1,6 @@
 package intefaces;
 
-public class Triangulo extends Figura implements OperacionesBasicas{
+public class Triangulo extends Figura implements OperacionesBasicas, OperacionesAvanzadas{
 	private int base;
 	private int altura;
 
@@ -38,7 +38,17 @@ public class Triangulo extends Figura implements OperacionesBasicas{
 		else
 			System.out.println("El ángulo mínimo de rotación es " + OperacionesBasicas.rotacionMinima + "°");
 	}
-
+	
+	@Override
+	public String serializar() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Triángulo: ");
+		sb.append(" base=" + this.base);
+		sb.append(" altura=" + this.altura);
+		sb.append(" area=" + this.area());
+		sb.append(" color=" + getColor());
+		return sb.toString();
+	}
 	
 	
 	

@@ -31,5 +31,16 @@ public class PruebaFigura {
 			System.out.println("Implementa la interfaz Operaciones básicas");
 		
 		System.out.println("Ángulo mínimo de rotación: " + OperacionesBasicas.rotacionMinima + "°");
+		
+		Figura[] figuras = new Figura[5];
+		figuras[0] = new Circulo(4, "rojo");
+		figuras[1] = new Triangulo(2, 7, "verde");
+		figuras[2] = new Rectangulo(4, 6, "amarillo");
+		figuras[3] = new Circulo(3, "azul");
+		figuras[4] = new Triangulo(7, 3, "morado");				
+		
+		for(Figura fg : figuras) {
+			System.out.println(((OperacionesAvanzadas)fg).serializar());
+		}
 	}
 }

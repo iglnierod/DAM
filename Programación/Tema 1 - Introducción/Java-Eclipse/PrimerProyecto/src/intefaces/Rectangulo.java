@@ -1,6 +1,6 @@
 package intefaces;
 
-public class Rectangulo extends Figura implements OperacionesBasicas{
+public class Rectangulo extends Figura implements OperacionesBasicas, OperacionesAvanzadas{
 	private int base, altura;
 
 	public Rectangulo(int base, int altura, String color) {
@@ -20,6 +20,17 @@ public class Rectangulo extends Figura implements OperacionesBasicas{
 			System.out.println("El rectángulo ha rotado " + grados + "°");
 		else
 			System.out.println("El ángulo mínimo de rotacióne es " + OperacionesBasicas.rotacionMinima + "°");
+	}
+	
+	@Override
+	public String serializar() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("Rectángulo: ");
+		sb.append(" base=" + this.base);
+		sb.append(" altura=" + this.altura);
+		sb.append(" area=" + this.area());
+		sb.append(" color=" + getColor());
+		return sb.toString();
 	}
 	
 	public int getBase() {
