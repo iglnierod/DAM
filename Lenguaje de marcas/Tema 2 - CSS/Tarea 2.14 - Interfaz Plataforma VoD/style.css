@@ -125,146 +125,103 @@ body{
 }
 
 /*PORTADAS DE SERIES Y PELICULAS*/
-.box1{
-    background-image: url('https://flxt.tmsimg.com/assets/p21271543_b_h8_ab.jpg');
+.center-cover{
     background-position: center;
     background-size: cover;
+}
+
+.box1{
+    background-image: url('https://flxt.tmsimg.com/assets/p21271543_b_h8_ab.jpg'); 
 }
 
 .box2{
     background-image: url('https://media.vogue.mx/photos/5e26e68b07b0840008ae2c13/3:2/w_1200,h_800,c_limit/1917.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 .box3{
     background-image: url('https://c4.wallpaperflare.com/wallpaper/539/710/449/movies-forrest-gump-wallpaper-preview.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 .box4{
     background-image: url('https://static1.colliderimages.com/wordpress/wp-content/uploads/2022/11/avatar-the-way-of-water-poster.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 .box5{
     background-image: url('https://dx35vtwkllhj9.cloudfront.net/universalstudios/puss-in-boots-the-last-wish/images/regions/ca/header.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 .box6{
     background-image: url('https://imageservice.sky.com/pcms/cf5c3098-1fac-11ed-af47-63a0c92c2d31/LAND_16_9?territory=GB&proposition=NOWTV&language=eng');
-    background-position: center;
-    background-size: cover;
 }
 
 .box7{
     background-image: url('https://images7.alphacoders.com/124/1241136.png');
-    background-position: center;
-    background-size: cover;
 }
 
 .box8{
     background-image: url('https://imageservice.sky.com/contentid/A5EK7d9CfGbSnrHJ9DDXw/LAND_16_9?language=eng&territory=GB&proposition=NOWTV&version=3c97d0dd-cbb1-3e2c-81dd-2c4e2a553dac');
-    background-position: center;
-    background-size: cover;
 }
 
 .box9{
     background-image: url('https://static.wikia.nocookie.net/d32ad61f-d8b2-428f-8354-a200e2f96a88');
-    background-position: center;
-    background-size: cover;
 }
 
 .box10{
     background-image: url('https://westshoreroar.com/wp-content/uploads/2019/01/spiderman-900x473.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 .box11{
     background-image: url('https://images6.fanpop.com/image/photos/43200000/Your-Name-Wallpapers-makoto-shinkai-43274968-1920-1080.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 .box12{
     background-image: url('https://www.itl.cat/pngfile/big/129-1294318_bolt-wallpapers-ypdr7jj-bolt-movie-bolt-character.png');
-    background-position: center;
-    background-size: cover;
 }
 
 .box13{
     background-image: url('https://w0.peakpx.com/wallpaper/37/639/HD-wallpaper-shrek-shrek-2.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 .box14{
     background-image: url('https://pbs.twimg.com/media/EG1_TwGU0AINJ3u.jpg:large');
-    background-position: center;
-    background-size: cover;
 }
 
 .box15{
     background-image: url('https://cdn.thinglink.me/api/image/611546995990986754/1024/10/scaletowidth?e=');
-    background-position: center;
-    background-size: cover;
 }
 
 .box16{
     background-image: url('https://i-viaplay-com.akamaized.net/viaplay-prod/989/580/1460161512-a64b571a7c4fbbd48489a5a602bc01e4e66708e7.jpg?width=960&height=540');
-    background-position: center;
-    background-size: cover;
 }
 
 .box17{
     background-image: url('https://rare-gallery.com/thumbnail/71701-Ellen-Page-Joseph-Gordon-levitt-Leonardo-Dicaprio.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 .box18{
     background-image: url('https://i.pinimg.com/originals/e9/24/0b/e9240b7c5b29b0fb4aa86304a03287e8.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 .box19{
     background-image: url('https://wallpapercave.com/wp/wp3622317.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 .box20{
     background-image: url('https://images2.alphacoders.com/127/1279480.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 .box21{
     background-image: url('https://images.alphacoders.com/112/1121053.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 .box22{
     background-image: url('https://www.wallpaperflare.com/static/995/81/141/fight-club-edward-norton-brad-pitt-movies-wallpaper.jpg');
-    background-position: center;
-    background-size: cover;
 }
 
 .box23{
     background-image: url('https://i0.wp.com/universal-stories.com/wp-content/uploads/2021/06/Watch-Pursuit-of-Happiness-2001-Prime-Video.jpg?fit=19201080&ssl=1');
-    background-position: center;
-    background-size: cover;
 }
 
 .box24{
     background-image: url('https://c4.wallpaperflare.com/wallpaper/651/656/1019/movie-men-in-black-ii-tommy-lee-jones-will-smith-wallpaper-preview.jpg');
-    background-position: center;
-    background-size: cover;
 }
