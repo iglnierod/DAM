@@ -1,0 +1,21 @@
+# CONFIGURACION
+git config --global user.name 
+git config --global user.email
+git config --list
+
+# CREACION Y ACTUALIZACIÓN DEL REPOSITORIO
+git init
+ls -la / ls -h
+git status
+git add .
+git commit -m ""
+git log --oneline --graph --decorate --all
+git diff
+git show // Diferencia entre commits
+git commit --amend -m "" // Renombrar ultimo commit
+
+# MANEJO DEL HISTORIAL DE CAMBIOS
+git reset --hard // Volvera a version antigua
+git remote remove origin
+git diff HEAD~2..HEAD
+git annotate archivo.txt
