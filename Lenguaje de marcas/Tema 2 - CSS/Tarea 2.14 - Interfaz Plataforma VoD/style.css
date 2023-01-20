@@ -42,7 +42,6 @@ body{
 }
 
 .trending,.animated,.drama{
-    overflow: auto;
     min-width: 100vh;
     height: 730px;
     border: 1px solid white;
@@ -171,11 +170,11 @@ body{
 }
 
 .box11{
-    background-image: url('https://images6.fanpop.com/image/photos/43200000/Your-Name-Wallpapers-makoto-shinkai-43274968-1920-1080.jpg');
+    background-image: url('https://media.discordapp.net/attachments/698131850656350210/1066113924333830234/Your-Name-Wallpapers-makoto-shinkai-43274968-1920-1080.png?width=720&height=405');
 }
 
 .box12{
-    background-image: url('https://www.itl.cat/pngfile/big/129-1294318_bolt-wallpapers-ypdr7jj-bolt-movie-bolt-character.png');
+    background-image: url('https://image.tmdb.org/t/p/original/iQBucIw8yqKMwqGccch4eMd7cj1.jpg');
 }
 
 .box13{
@@ -183,7 +182,7 @@ body{
 }
 
 .box14{
-    background-image: url('https://pbs.twimg.com/media/EG1_TwGU0AINJ3u.jpg:large');
+    background-image: url('https://media.discordapp.net/attachments/698131850656350210/1066113404009455676/EG1_TwGU0AINJ3u.png?width=720&height=405');
 }
 
 .box15{
@@ -223,5 +222,5 @@ body{
 }
 
 .box24{
-    background-image: url('https://c4.wallpaperflare.com/wallpaper/651/656/1019/movie-men-in-black-ii-tommy-lee-jones-will-smith-wallpaper-preview.jpg');
+    background-image: url('https://image.tmdb.org/t/p/original/oV1tGXklWoJjgZ8QQ8cn2NM70fx.jpg');
 }
