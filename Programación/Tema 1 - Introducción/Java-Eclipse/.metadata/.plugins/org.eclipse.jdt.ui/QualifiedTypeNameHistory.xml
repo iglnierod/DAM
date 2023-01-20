@@ -21,4 +21,7 @@
     <fullyQualifiedTypeName name="intefaces2.DatosCentroDeEstudios"/>
     <fullyQualifiedTypeName name="intefaces2.CalculosCentroDeEstudios"/>
     <fullyQualifiedTypeName name="intefaces2.ClaseCentroDeEstudios"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="ejercicio23POO.EmpleadoProduccion"/>
+    <fullyQualifiedTypeName name="ejercicio23POO.EmpleadoDistribuccion"/>
 </qualifiedTypeNameHistroy>

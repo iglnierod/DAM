@@ -1,6 +1,6 @@
 package intefaces;
 
-public abstract class Figura {
+public abstract class Figura implements Comparable{
 	private String color;
 	
 	public Figura(String color) {
@@ -12,4 +12,14 @@ public abstract class Figura {
 	}
 	
 	public abstract double area();
+	
+	@Override
+	public int compareTo(Object o) {
+		Figura f = (Figura)o;
+		if(this.area() < f.area())
+			return -1;
+		if(this.area() > f.area())
+			return 1;
+		return 0;
+	}
 }

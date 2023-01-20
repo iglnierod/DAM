@@ -1,5 +1,7 @@
 package intefaces;
 
+import java.util.Arrays;
+
 public class PruebaFigura {
 
 	public static void main(String[] args) {
@@ -41,6 +43,11 @@ public class PruebaFigura {
 		
 		for(Figura fg : figuras) {
 			System.out.println(((OperacionesAvanzadas)fg).serializar());
+		}
+		
+		Arrays.sort(figuras);
+		for(Figura figura : figuras) {
+			System.out.println(figura.area());
 		}
 	}
 }
