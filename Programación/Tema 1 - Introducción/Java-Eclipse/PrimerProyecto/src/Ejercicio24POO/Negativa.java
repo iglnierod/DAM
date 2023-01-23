@@ -1,4 +1,4 @@
-package PrimerProyecto.src.Ejercicio24POO;
+package Ejercicio24POO;
 
 public class Negativa implements  ImpresionNormal{
     @Override

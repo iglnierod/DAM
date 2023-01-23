@@ -1,4 +1,4 @@
-package PrimerProyecto.src.Ejercicio25POO;
+package Ejercicio25POO;
 
 public interface Estadisticas {
 

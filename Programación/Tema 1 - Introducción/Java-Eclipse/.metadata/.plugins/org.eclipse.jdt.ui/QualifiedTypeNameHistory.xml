@@ -24,4 +24,8 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="ejercicio23POO.EmpleadoProduccion"/>
     <fullyQualifiedTypeName name="ejercicio23POO.EmpleadoDistribuccion"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="Ejercicio27POO.Caminante"/>
+    <fullyQualifiedTypeName name="Ejercicio27POO.Mamifero"/>
+    <fullyQualifiedTypeName name="Ejercicio27POO.Murcielago"/>
 </qualifiedTypeNameHistroy>
