@@ -1,0 +1,126 @@
+/*
+Puntos de ruptura de dispositivos más pequeños a más grandes: ;
+Normalmente será el que utilicemos
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { ... }
+*/
+
+/*
+Puntos de ruptura de dispositivos más grandes a más pequeños: ;
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { ... }
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { ... }
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
+*/
+
+
+/* hacemos un diseño responsive desde dispositivos 
+de móviles (muy pequeños) a dispositvos de escritorio (muy grandes) */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.parent{
+    border: 2px dotted black;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box{
+    background-color: steelblue;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    flex-basis: 100%;
+}
+
+ /*Small devices (landscape phones, 576px and up)*/
+ @media (max-width: 576px) { 
+	.box{
+        flex-basis: 50%;
+    }
+
+    .parent{
+        width: 95%;
+    }
+
+    .dos{
+        display: none;
+    }
+}
+
+ /*Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) { 
+    .box{
+        flex-basis: 33%;
+    }
+
+    .parent{
+        width: 90%;
+    }
+    
+    .tres{
+        display: none;
+    }
+}
+
+ /*Large devices (desktops, 992px and up)*/
+@media (max-width: 992px) { 
+    .box{
+        flex-basis: 25%;
+    }
+
+    .parent{
+        width: 85%;
+    }
+
+    .cuatro{
+        display: none;
+    }
+}
+
+ /*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { 
+    .box{
+        flex-basis: 16.66%;
+    }
+
+    .parent{
+        width: 85%;
+    }
+
+}
+
+ /*XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) { 
+    .box{
+        flex-basis: 12.5%;
+    }
+
+    .parent{
+        width: 80%;
+    }
+}

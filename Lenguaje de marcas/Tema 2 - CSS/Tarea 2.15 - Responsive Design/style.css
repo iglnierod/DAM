@@ -47,6 +47,10 @@ body{
     border: 1px solid white;
 }
 
+.comedy{
+    min-width: 100vh;
+}
+
 .drama{
     border-top: none;
 }
@@ -120,6 +124,71 @@ body{
 .portada .box:hover ~  h3{
     margin-top: 10px;
     font-size: 25px;
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 1750px){
+    .parent{
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr;
+        height: 600px;
+    }
+
+    .trending,.animated,.drama{
+        min-width: 100vh;
+        height: 730px;
+        border: 1px solid white;
+    }
+    
+    #responsive{
+        display: none;
+    }
+}
+
+@media (max-width: 1340px){
+    .parent{
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        height: 900px;
+        row-gap: 35px;
+    }
+
+    .trending,.animated,.drama{
+        min-width: 100vh;
+        height: 1280px;
+        border: 1px solid white;
+    }
+
+    #responsive{
+        display: inherit;
+    }
+
+    .portada{
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 910px){
+    .parent{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+        height: 2140px;
+        row-gap: 30px;
+    }
+
+    #responsive{
+        display: inherit;
+    }
+
+    .trending,.animated,.drama{
+        min-width: 100vh;
+        height: 2410px;
+        border: 1px solid white;
+    }
+
+    .portada{
+        margin: 20px 0;
+    }
 }
 
 /*PORTADAS DE SERIES Y PELICULAS*/
