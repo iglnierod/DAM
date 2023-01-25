@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarea 2.15</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="icon" href="https://img.freepik.com/free-vector/isometric-cinema-icon-set_1284-18691.jpg?w=2000">
@@ -11,8 +9,25 @@
 <body>
     <section class="container">
         <header>
-            <nav></nav>
+            <nav class="categorias">
+                <ul>
+                    <li><a href="#" id="home">Home</a></li>
+                    <li><a href="#trending">Trending</a></li>
+                    <li><a href="#comedy">Comedy</a></li>
+                    <li><a href="#animated">Animated</a></li>
+                    <li><a href="#drama">Drama</a></li>
+                </ul>
+            </nav>
+            <nav class="busqueda">
+                <section>
+                    <i class="material-icons-round">search</i>
+                    <form>
+                        <input type="text" placeholder="Look for your favourite film!">
+                    </form>
+                </section>
+            </nav>
         </header>
+        <a id="trending"></a>
         <section class="trending">
             <h2>Trending<i class="material-icons-round" id="expandir" title="Minimizar">expand_less</i></h2>
             <section class="parent">
@@ -55,11 +70,13 @@
         </section>
 
         <!--COMEDY-->
+        <a id="comedy"></a>
         <section class="comedy">
             <h2>Comedy<i class="material-icons-round" id="expandir" title="Maximizar">expand_more</i></h2>
         </section>
 
         <!--ANIMATED-->
+        <a id="animated"></a>
         <section class="animated">
             <h2>Animated<i class="material-icons-round" id="expandir" title="Minimizar">expand_less</i></h2>
             <section class="parent">
@@ -100,7 +117,9 @@
                 </section>
             </section>
         </section>
+        
         <!--DRAMA-->
+        <a id="drama"></a>
         <section class="drama">
             <h2>Drama<i class="material-icons-round" id="expandir" title="Minimizar">expand_less</i></h2>
             <section class="parent">

@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
 /*ICONS*/
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Round");
+
+/*GOOGLE ICONS*/
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Round");
 *{
     box-sizing: border-box;
     padding: 0;
@@ -41,6 +44,84 @@ body{
     padding: 10px;
 }
 
+/*HEADER*/
+header{
+    border: 1px solid white;
+    margin-bottom: 20px;
+    height: 130px;
+    display: flex;
+    align-content: center;
+    border-radius: 5px;
+}
+
+header a:visited,header a:link{
+    color: white;
+    text-decoration: none;
+}
+
+.categorias ul{
+    width: 1000px;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 25px;
+}
+
+.categorias ul li a{
+    font-size: 40px;
+    padding: 12px;
+    border-radius: 15px;
+}
+
+#home{
+    outline: 2px solid white;
+    font-weight: bold;
+    background: rgb(73, 73, 73);
+}
+
+.categorias ul li a:hover{
+    transition: 0.3s;
+    background: rgb(73, 73, 73);
+    outline: 1px solid white;
+}
+
+.busqueda{
+    padding: 0 35px;
+}
+
+.busqueda section{
+    display: flex;
+    outline: 2px solid rgb(141, 141, 141);
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    margin: 47px 0;
+}
+
+.busqueda section i{
+    font-size: 30px;
+    padding: 4px;
+    background: rgb(44, 44, 44);
+    color: rgb(185, 185, 185);
+}
+
+.busqueda section form input{
+    height: 100%;
+    width: 300px;
+    background: rgb(82, 82, 82);
+    outline: none;
+    padding: 5px;
+    color: whitesmoke;
+    font-family: 'Red Hat Display';
+}
+
+.busqueda section form input::placeholder{
+    color: rgb(180, 180, 180);
+    font-size: 15px;
+}
+
+/*GRID*/
 .trending,.animated,.drama{
     min-width: 100vh;
     height: 730px;
@@ -127,6 +208,9 @@ body{
 }
 
 /*MEDIA QUERIES*/
+
+
+/*GRID*/
 @media (max-width: 1750px){
     .parent{
         grid-template-columns: 1fr 1fr 1fr; 
