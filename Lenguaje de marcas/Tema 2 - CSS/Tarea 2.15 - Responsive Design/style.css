@@ -75,6 +75,10 @@ header a:visited,header a:link{
     border-radius: 15px;
 }
 
+#burger-menu{
+    display: none;
+}
+
 #home{
     outline: 2px solid white;
     font-weight: bold;
@@ -96,6 +100,8 @@ header a:visited,header a:link{
     outline: 2px solid rgb(141, 141, 141);
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     margin: 47px 0;
 }
 
@@ -114,11 +120,21 @@ header a:visited,header a:link{
     padding: 5px;
     color: whitesmoke;
     font-family: 'Red Hat Display';
+    border: none;
 }
 
 .busqueda section form input::placeholder{
     color: rgb(180, 180, 180);
     font-size: 15px;
+}
+
+.perfil section{
+    outline: 1px solid white;
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
+    margin-top: 18px;
+    margin-left: 140px;
 }
 
 /*GRID*/
