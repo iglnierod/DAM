@@ -52,6 +52,7 @@ header{
     display: flex;
     align-content: center;
     border-radius: 5px;
+    min-width: 100vh;
 }
 
 header a:visited,header a:link{
@@ -128,13 +129,31 @@ header a:visited,header a:link{
     font-size: 15px;
 }
 
+.perfil{
+    width: 100%;
+}
+
 .perfil section{
-    outline: 1px solid white;
     width: 90px;
     height: 90px;
     border-radius: 100px;
     margin-top: 18px;
-    margin-left: 140px;
+    float: right;
+    margin-right: 25px;
+    outline: 2px solid white;
+}
+
+.perfil section{
+    background: url('https://images-ext-1.discordapp.net/external/iHg-aC3SiMyQC0ps87AlZ7wZX41zRw06ZK8hy-wUF-I/https/i.imgur.com/vkb2qdG.png?width=510&height=512');
+    background-position: center;
+    background-size: cover;
+}
+
+.perfil section:hover{
+    cursor: pointer;
+    background: url('https://i.pinimg.com/originals/94/f0/65/94f0653d30bd368e5dfe492f0f60e01e.gif');
+    background-position: center;
+    background-size: cover;
 }
 
 /*GRID*/
@@ -224,7 +243,49 @@ header a:visited,header a:link{
 }
 
 /*MEDIA QUERIES*/
+/*HEADER*/
+@media (max-width: 1630px){
+    .categorias ul{
+        justify-content: flex-start;
+        gap: 25px;
+    }
+}
 
+@media (max-width: 1579px){
+    #drama{
+        display: none;
+    }
+    .categorias{
+        width: 820px;
+    }
+    .busqueda{
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 1310px){
+    #animated{
+        display: none;
+    }
+
+    .categorias{
+        width: 625px;
+    }
+}
+
+@media (max-width: 1100px){
+    .categorias ul li{
+        display: none;
+    }
+
+    #burger-menu{
+        display: inherit;
+    }
+
+    .categorias{
+        width: 320px;
+    }
+}
 
 /*GRID*/
 @media (max-width: 1750px){
@@ -351,6 +412,10 @@ header a:visited,header a:link{
 
 .box14{
     background-image: url('https://media.discordapp.net/attachments/698131850656350210/1066113404009455676/EG1_TwGU0AINJ3u.png?width=720&height=405');
+}
+
+.box14:hover{
+    background-image: url('https://media.tenor.com/cIt-ized-lYAAAAC/walle-bouncy-balls.gif');
 }
 
 .box15{
