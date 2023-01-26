@@ -5778,6 +5778,7 @@ java.lang.IllegalArgumentException
 	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:166)
 	at org.eclipse.jdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$1.run(SelectionListenerWithASTManager.java:151)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+<<<<<<< HEAD
 !SESSION 2023-01-26 20:03:50.942 -----------------------------------------------
 eclipse.buildId=4.25.0.I20220831-1800
 java.version=17.0.4.1
@@ -5831,3 +5832,5 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+=======
+>>>>>>> 747e7b53c52dd2edb578196b97186333984b43eb
