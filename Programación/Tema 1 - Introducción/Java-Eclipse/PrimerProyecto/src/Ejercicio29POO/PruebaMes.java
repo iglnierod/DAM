@@ -18,22 +18,13 @@ public class PruebaMes {
 
 		public static void mostrar() {
 			for (Mes m : Mes.values()) {
-//				System.out.println((m.ordinal() + 1) + " - " + m.name());
 				System.out.printf("%2d - %s\n", m.ordinal() + 1, m.name());
 			}
 		}
 
 		public static void mostrarInvertido() {
-//			Mes[] meses = { Mes.ENERO, Mes.FEBRERO, Mes.MARZO, Mes.ABRIL, Mes.MAYO, Mes.JUNIO, Mes.JULIO, Mes.AGOSTO,
-//					Mes.SEPTIEMBRE, Mes.OCTUBRE, Mes.NOVIEMBRE, Mes.DICIEMBRE };
-<<<<<<< HEAD
 			for (int i = Mes.values().length - 1; i >= 0; i--) {
 				System.out.printf("%2d - %s\n", Mes.values()[i].getNumMes(), Mes.values()[i].name());
-=======
-			Mes[] meses = Mes.values();
-			for (int i = meses.length - 1; i >= 0; i--) {
-				System.out.printf("%2d - %s\n", meses[i].getNumMes(), meses[i].name());
->>>>>>> 747e7b53c52dd2edb578196b97186333984b43eb
 			}
 		}
 	}
