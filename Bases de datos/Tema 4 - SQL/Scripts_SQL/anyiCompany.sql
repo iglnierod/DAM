@@ -14,10 +14,14 @@ DROP TABLE IF EXISTS pagosPendientes;
 CREATE TABLE pagosPendientes(
 	codPago INT AUTO_INCREMENT,
 	nif VARCHAR(10) ,
-	importe DOUBLE UNSIGNED NOT NULL,
+	importe DOUBLE(10,2) UNSIGNED NOT NULL,
     PRIMARY KEY (codPago),
 	FOREIGN KEY (nif) REFERENCES clientes(nif) 
     ON UPDATE NO ACTION ON DELETE NO ACTION
+    
+    # CONSTRAINT fk_nif FOREIGN KEY (nif) REFERENCES clientes(nif) 
+    # ON UPDATE NO ACTION ON DELETE NO ACTION
+    -- NO ACTION = RESTRICT
 );
 
 INSERT INTO clientes (nif, nombre)
@@ -54,7 +58,6 @@ ALTER TABLE pagosPendientes
 ADD CONSTRAINT fk_nif FOREIGN KEY (nif) REFERENCES clientes(nif)
 ON DELETE SET NULL
 ON UPDATE CASCADE;
-
 
 UPDATE clientes
 SET nif = '55555555-L'
