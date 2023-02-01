@@ -43,12 +43,18 @@ public class Factorial {
 		return digitos(num / 10) + 1;
 	}
 	
+	static int sumarCifras(int n) {
+		if(n <= 0) 
+			return 0;
+		return (int)n%10 + sumarCifras(n/10);
+	}
 	public static void main(String[] args) {
 		System.out.println(Factorial.calcular(0));
 		System.out.println(Factorial.factorialRecursivo(5));
 		Factorial.imprimir(3);
 		System.out.println("\n" + impar(7));
 		System.out.println(digitos(3472));
+		System.out.println(sumarCifras(375));
 	}
 }
 
