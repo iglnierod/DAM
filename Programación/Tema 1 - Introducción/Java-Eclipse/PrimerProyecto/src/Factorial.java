@@ -48,6 +48,33 @@ public class Factorial {
 			return 0;
 		return (int)n%10 + sumarCifras(n/10);
 	}
+	
+	static int sumarNumeros(int n) {
+		if(n < 2)
+			return 1;
+		return sumarNumeros(n-1) + n;
+	}
+	
+	static int fibonacciRecursivo(int n) {
+		if(n < 0)
+			return 0;
+		if(n == 1)
+			return 1;
+		return fibonacciRecursivo(n-1) + fibonacciRecursivo(n-2);
+	}
+	
+	static int fibonacciIterativo(int n) {
+		int res = 0;
+		int aux0 = 0;
+		int aux1 = 1;
+		for(int i = 1; i < n; i++) {	
+			res = aux0 + aux1;
+			aux0 = aux1;
+			aux1 = res;
+		}
+		return res;
+	}
+	
 	public static void main(String[] args) {
 		System.out.println(Factorial.calcular(0));
 		System.out.println(Factorial.factorialRecursivo(5));
@@ -55,6 +82,8 @@ public class Factorial {
 		System.out.println("\n" + impar(7));
 		System.out.println(digitos(3472));
 		System.out.println(sumarCifras(375));
+		System.out.println(sumarNumeros(7));
+		System.out.println(fibonacciIterativo(9));
 	}
 }
 
