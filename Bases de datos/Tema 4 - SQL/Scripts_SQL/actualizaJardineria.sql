@@ -22,3 +22,8 @@ WHERE CodigoCliente = 39;
 DELETE FROM Clientes
 WHERE CodigoCliente = 39;
 
+ALTER TABLE pedidos DROP FOREIGN KEY Pedidos_Clientes;
+
+ALTER TABLE pedidos
+ADD CONSTRAINT Pedidos_Clientes foreign key (CodigoCliente) REFERENCES clientes(CodigoCliente)
+ON UPDATE CASCADE;
