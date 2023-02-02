@@ -3,10 +3,10 @@ package enumerados;
 public enum Equipo {
 	BARÇA("FC Barcelona", 1), REAL_MADRID("Real Madrid", 2),
 	SEVILLA("Sevilla FC", 4), VILLARREAL("Villarreal", 7);
-	
+	//ATRIBUTOS
 	private String nombreClub;
 	private final int puestoLiga;
-	
+	//CONSTRUCTOR
 	private Equipo(String nombreClub, int puestoLiga) {
 		this.nombreClub = nombreClub;
 		this.puestoLiga = puestoLiga;

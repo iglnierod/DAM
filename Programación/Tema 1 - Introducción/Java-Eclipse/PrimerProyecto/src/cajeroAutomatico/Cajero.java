@@ -29,11 +29,13 @@ public class Cajero {
 				int saldoInicial = sc.nextInt();
 				cuenta = new Cuenta(saldoInicial);
 				cuentaCreada = true;
+				System.out.println("La cuenta se ha creado con " + saldoInicial + " €");
 				break;
 			case 3:
 				if(cuentaCreada) {
 					System.out.println("¿Cuánto desea ingresar?");
 					cuenta.ingresar(sc.nextFloat());
+					System.out.println();
 					break;
 				}
 				System.err.println("ERROR");

@@ -10,7 +10,7 @@ public class PruebasEnumerados {
 		color = "rojo";
 		color = "verde";
 		color = "azul";
-		color = "coche";
+		color = "tetas";
 
 		Color miColor = Color.VERDE;
 		System.out.println(miColor);
@@ -20,10 +20,10 @@ public class PruebasEnumerados {
 			System.out.println("El color es rojo");
 			break;
 		case VERDE:
-			System.out.println("El color es rojo");
+			System.out.println("El color es verde");
 			break;
 		case AZUL:
-			System.out.println("El color es rojo");
+			System.out.println("El color es azul");
 			break;
 		}
 
@@ -31,7 +31,12 @@ public class PruebasEnumerados {
 		for (Color c : Color.values()) {
 			System.out.println(c);
 		}
-
+		
+		int[] test = {1,5,20,30,80,100,33};
+		for(int i = test.length - 1; i >= 0; i--) {
+			System.out.println(test[i]);
+		}
+		
 		Demarcacion delantero = Demarcacion.DELANTERO;
 		Demarcacion defensa = Demarcacion.DEFENSA;
 
