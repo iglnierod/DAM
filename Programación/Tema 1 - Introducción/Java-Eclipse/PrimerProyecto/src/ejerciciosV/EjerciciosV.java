@@ -29,16 +29,12 @@ public class EjerciciosV {
 	}
 
 	// EJ3
-	static int potencia(int b, int e) {
+	static double potencia(int b, int e) {
 		if (e == 0)
 			return 1;
+		if (e < 0)
+			return potencia(b, e + 1) / b;
 		return potencia(b, e - 1) * b;
-	}
-
-	static double potenciaNegativa(int b, int e) {
-		if (e == 0)
-			return 1;
-		return potenciaNegativa(b, e + 1) * 1 / b;
 	}
 
 	public static void main(String[] args) {
@@ -70,6 +66,6 @@ public class EjerciciosV {
 		System.out.println(potencia(2, 3));
 
 		System.out.println("Potencia Negativa");
-		System.out.println(potenciaNegativa(2, -2));
+		System.out.println(potencia(2, -2));
 	}
 }
