@@ -74,8 +74,7 @@ public class ArrayReales implements Estadisticas {
 		return suma;
 	}
 
-	public static String obtenerCadenaDecimal(double d, int n) {
-		String string = String.format("%." + n + "f", d);
-		return string;
+	public static String obtenerCadenaDecimal(double valor, int numDecimales) {
+		return String.format("%." + numDecimales + "f", valor);
 	}
 }

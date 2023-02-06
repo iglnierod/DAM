@@ -1,0 +1,9 @@
+# EXAMEN PROGRAMACION
+--
+implements Compare
+@Override compareTo -> src.interfaces.Figura
+--
+Array.sort
+--
+printf / String.format
+--

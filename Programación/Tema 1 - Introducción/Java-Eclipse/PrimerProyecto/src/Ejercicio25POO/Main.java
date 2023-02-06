@@ -7,6 +7,6 @@ public class Main {
         System.out.println("Valores:\n" + array.toString());
         System.out.println("Mínimo: " + ArrayReales.obtenerCadenaDecimal(array.minimo(),3));
         System.out.println("Máximo: " + ArrayReales.obtenerCadenaDecimal(array.maximo(),3));
-        System.out.println("Sumatorio: " + ArrayReales.obtenerCadenaDecimal(array.sumatorio(),2));
+        System.out.println("Sumatorio: " + ArrayReales.obtenerCadenaDecimal(array.sumatorio(),3));
     }
 }

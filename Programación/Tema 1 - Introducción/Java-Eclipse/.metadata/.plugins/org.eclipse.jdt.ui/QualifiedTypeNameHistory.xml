@@ -3,7 +3,6 @@
     <fullyQualifiedTypeName name="java.util.function.Function"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
-    <fullyQualifiedTypeName name="java.math.BigInteger"/>
     <fullyQualifiedTypeName name="Objetos.RectanguloTexto"/>
     <fullyQualifiedTypeName name="Objetos.CuentaBancaria"/>
     <fullyQualifiedTypeName name="Objetos.Temperatura"/>
@@ -37,4 +36,5 @@
     <fullyQualifiedTypeName name="lunna.Persona"/>
     <fullyQualifiedTypeName name="java.lang.Void"/>
     <fullyQualifiedTypeName name="ej15.Triangulo"/>
+    <fullyQualifiedTypeName name="java.math.BigInteger"/>
 </qualifiedTypeNameHistroy>
