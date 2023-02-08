@@ -1,86 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE DAM[
+<!ELEMENT DAM (primero, segundo)>
+<!ELEMENT primero (modulo+)>
+<!ELEMENT segundo (modulo+)>
+<!ELEMENT modulo (cod, nombre, horasSemanales, horasAnuales, profesor?)>
+<!ELEMENT cod (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT horasSemanales (#PCDATA)>
+<!ELEMENT horasAnuales (#PCDATA)>
+<!ELEMENT profesor (#PCDATA)>
+]>
+
 <DAM>
     <primero>
-            <modulo cod="MP0373">
+            <modulo>
+                <cod>MP0373</cod>
                 <nombre>Linguaxes de marcas e sistemas de xestión de información</nombre>
-                <horas-semanales>5</horas-semanales>
+                <horasSemanales>5</horasSemanales>
                 <horasAnuales>133</horasAnuales>
                 <profesor>Antonio</profesor>
             </modulo>
-            <modulo cod="MP0483">
+            <modulo>
+                <cod>MP0483</cod>
                 <nombre>Sistemas informáticos</nombre>
                 <horasSemanales>7</horasSemanales>
                 <horasAnuales>186</horasAnuales>
                 <profesor>Fernando</profesor>
             </modulo>
-            <modulo cod="MP0484">
+            <modulo>
+                <cod>MP0484</cod>
                 <nombre>Bases de datos</nombre>
                 <horasSemanales>7</horasSemanales>
                 <horasAnuales>187</horasAnuales>
                 <profesor>Olga</profesor>
-            </modulo>
-            <modulo cod="MP0485">
+              </modulo>
+              <modulo>
+                <cod>MP0485</cod>
                 <nombre>Programación</nombre>
                 <horasSemanales>9</horasSemanales>
                 <horasAnuales>240</horasAnuales>
                 <profesor>Alvaro</profesor>
-            </modulo>
-            <modulo cod="MP0487">
+              </modulo>
+              <modulo>
+                <cod>MP0487</cod>
                 <nombre>Contornos de desenvolvemento</nombre>
                 <horasSemanales>107</horasSemanales>
                 <horasAnuales>4</horasAnuales>
                 <profesor>Victor</profesor>
-            </modulo>
-            <modulo cod="MP0493">
+              </modulo>
+              <modulo>
+                <cod>MP0493</cod>
                 <nombre>Formación e orientación laboral</nombre>
                 <horasSemanales>4</horasSemanales>
                 <horasAnuales>107</horasAnuales>
                 <profesor>Esther</profesor>
-            </modulo>
+              </modulo>
     </primero>
     <segundo>
-        <modulo cod="MP0486">
+        <modulo>
+            <cod>MP0486</cod>
             <nombre>Acceso a datos</nombre>
             <horasSemanales>9</horasSemanales>
             <horasAnuales>157</horasAnuales>
             <profesor>Marcos</profesor>
         </modulo>
-        <modulo cod="MP0488">
+        <modulo>
+            <cod>MP0488</cod>
             <nombre>Desenvolvemento de interfaces</nombre>
             <horasSemanales>8</horasSemanales>
             <horasAnuales>140</horasAnuales>
             <profesor>Rafa</profesor>
         </modulo>
-        <modulo cod="MP0489">
+        <modulo>
+            <cod>MP0489</cod>
             <nombre>Programación multimedia e dispositivos móbiles</nombre>
             <horasSemanales>7</horasSemanales>
             <horasAnuales>123</horasAnuales>
             <profesor>Yanis</profesor>
         </modulo>
-        <modulo cod="MP0490">
+        <modulo>
+            <cod>MP0490</cod>
             <nombre>Programación de servizos e procesos</nombre>
             <horasSemanales>4</horasSemanales>
             <horasAnuales>70</horasAnuales>
             <profesor>Ebon</profesor>
         </modulo>
-        <modulo cod="MP0491">
+        <modulo>
+            <cod>MP0491</cod>
             <nombre>Sistemas de xestión empresarial</nombre>
             <horasSemanales>5</horasSemanales>
             <horasAnuales>87</horasAnuales>
             <profesor>Masi</profesor>
         </modulo>
-        <modulo cod="MP0492">
+        <modulo>
+            <cod>MP0492</cod>
             <nombre>Proxecto de desenvolvemento de aplicacións multiplataforma</nombre>
             <horasSemanales>0</horasSemanales>
             <horasAnuales>26</horasAnuales>
         </modulo>
-        <modulo cod="MP0494">
+        <modulo>
+            <cod>MP0494</cod>
             <nombre>Empresa e iniciativa emprendedora</nombre>
             <horasSemanales>3</horasSemanales>
             <horasAnuales>53</horasAnuales>
             <profesor>Esther</profesor>
         </modulo>
-        <modulo cod="MP0492">
+        <modulo>
+            <cod>MP0492</cod>
             <nombre>Formación en centros de traballo</nombre>
             <horasSemanales>0</horasSemanales>
             <horasAnuales>384</horasAnuales>
