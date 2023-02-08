@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book>
+        <title>Harry Potter And The Philosopher'S Stone</title>
+        <author>J.K. Rowling</author>
+        <genre>Fantasy</genre>
+        <release>1997</release>
+        <pages>223</pages>
+        <language>English</language>
+        <ISBN-10>9781408855652</ISBN-10>
+    </book>
+    <book>
+        <title>Harry Potter And The Chamber Of Secrets</title>
+        <author>J.K. Rowling</author>
+        <genre>Fantasy</genre>
+        <release>1998</release>
+        <pages>341</pages>
+        <language>English</language>
+        <ISBN-10>1408855666</ISBN-10>
+    </book>
+    <book>
+        <title>Harry Potter and the Prisoner of Azkaban</title>
+        <author>J.K. Rowling</author>
+        <genre>Fantasy</genre>
+        <release>1999</release>
+        <pages>435</pages>
+        <language>English</language>
+        <ISBN-10>043965548X</ISBN-10>
+    </book>
+    <book>
+        <title>Harry Potter and the Goblet of Fire</title>
+        <author>J.K. Rowling</author>
+        <genre>Fantasy</genre>
+        <release>2002</release>
+        <pages>734</pages>
+        <language>English</language>
+        <ISBN-10>1408855682</ISBN-10>
+    </book>
+    <book>
+        <title>Harry Potter and the Order of the Phoenix</title>
+        <author>J.K. Rowling</author>
+        <genre>Fantasy</genre>
+        <release>2003</release>
+        <pages>912</pages>
+        <language>English</language>
+        <ISBN-10>9781408855690</ISBN-10>
+    </book>
+    <book>
+        <title>Harry Potter and the Half-Blood Prince</title>
+        <author>J.K. Rowling</author>
+        <genre>Fantasy</genre>
+        <release>2005</release>
+        <pages>652</pages>
+        <language>English</language>
+        <ISBN-10>8175994347</ISBN-10>
+    </book>
+    <book>
+        <title>Harry Potter and the Deathly Hallows</title>
+        <author>J.K. Rowling</author>
+        <genre>Fantasy</genre>
+        <release>2007</release>
+        <pages>759</pages>
+        <language>English</language>
+        <ISBN-10>0545139708</ISBN-10>
+    </book>
+    <book>
+        <title>Harry Potter and the Cursed Child: Parts One and Two</title>
+        <author>J.K. Rowling</author>
+        <genre>Fantasy</genre>
+        <release>2016</release>
+        <pages>343</pages>
+        <language>English</language>
+        <ISBN-10>133821666X</ISBN-10>
+    </book>
+    <book>
+        <title>Don Quijote de la Mancha</title>
+        <author>Miguel de Cervantes</author>
+        <genre>Novel</genre>
+        <release>1605</release>
+        <pages>863</pages>
+        <language>Spanish</language>
+        <ISBN-10>8420466343</ISBN-10>
+    </book>
+    <book>
+        <title>Pride and Prejudice</title>
+        <author>Jane Austen</author>
+        <genre>Novel</genre>
+        <release>1813</release>
+        <pages>279</pages>
+        <language>English</language>
+        <ISBN-10>0141439518</ISBN-10>
+    </book>
+</books>
