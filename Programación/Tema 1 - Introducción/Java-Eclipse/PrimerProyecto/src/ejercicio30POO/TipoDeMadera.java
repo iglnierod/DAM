@@ -1,10 +1,10 @@
 package ejercicio30POO;
 
-public enum TipoDeMadera {
+public enum TipoDeMadera { 
 	// VALORES
 	ROBLE("Castaño verdoso", (short) 800), CAOBA("Marrón oscuro", (short) 770), NOGAL("Marrón rojizo", (short) 820),
 	CEREZO("Marrón cereza", (short) 790), BOJ("Marrón negruzco", (short) 675);
-
+	
 	// ATRIBUTOS
 	private final String Color;
 	private final short PesoEspecifico;
@@ -16,7 +16,7 @@ public enum TipoDeMadera {
 	}
 
 	// METODOS
-	public static void mostrarTodasLasCaracterísticas() {
+	public static void mostrarTodasLasCaracteristicas() {
 		for (TipoDeMadera tdm : TipoDeMadera.values()) {
 			System.out.println(tdm.name() + ": " + tdm.getColor() + " (" + tdm.getPesoEspecifico() + ")");
 		}
@@ -39,7 +39,7 @@ public enum TipoDeMadera {
 
 	// MAIN
 	public static void main(String[] args) {
-		TipoDeMadera.mostrarTodasLasCaracterísticas();
+		TipoDeMadera.mostrarTodasLasCaracteristicas();
 		TipoDeMadera nogal = TipoDeMadera.NOGAL;
 		System.out.println("\n" + nogal.toString());
 	}
