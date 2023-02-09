@@ -1,4 +1,10 @@
 INDEX VERSION 1.131+E:\DAM 1\Programación\Tema 1 - Introducción\Java-Eclipse\.metadata\.plugins\org.eclipse.jdt.core
 1865797976.index
 3585759780.index
+<<<<<<< HEAD
 3009453861.index
+=======
+2461555211.index
+3074109613.index
+2326369150.index
+>>>>>>> refs/remotes/origin/main
