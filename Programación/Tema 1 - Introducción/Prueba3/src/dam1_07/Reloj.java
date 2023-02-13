@@ -9,7 +9,7 @@ public class Reloj extends HoraExacta {
 	public Reloj(int hora, int minuto, int segundo) {
 		super(hora, minuto, segundo);
 		this.formato = Formato.VEINTICUATROHORAS;
-		if (hora >= 0 && hora <= 11)
+		if (hora >= 0 && hora <= 11) // FALLO: DEBERIA USAR this.getHora()
 			this.periodo = Periodo.AM;
 		else
 			this.periodo = Periodo.PM;
@@ -18,10 +18,10 @@ public class Reloj extends HoraExacta {
 	public Reloj(int hora, int minuto, int segundo, Periodo periodo) {
 		super(hora, minuto, segundo);
 		this.formato = Formato.DOCEHORAS;
-		if (hora < 12) {
+		if (hora < 12) { // FALLO: DEBERIA USAR this.getHora()
 			this.periodo = Periodo.AM;
 			return;
-		} else if (hora < 11) {
+		} else if (hora < 11) { // FALLO: DEBERIA USAR this.getHora()
 			this.periodo = Periodo.PM;
 			return;
 		}

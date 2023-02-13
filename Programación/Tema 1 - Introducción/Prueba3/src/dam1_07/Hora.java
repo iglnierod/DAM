@@ -64,6 +64,7 @@ public class Hora implements Comparable<Object> {
 		sb.append(this.minuto);
 
 		return sb.toString();
+//		return String.format("%02d:%02d", this.hora, this.minuto);
 	}
 
 	public void mostrarHora() {
