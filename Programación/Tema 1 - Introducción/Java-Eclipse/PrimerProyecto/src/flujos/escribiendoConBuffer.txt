@@ -1,0 +1,25 @@
+escribiendo una cadena desde Java
+Segunda frase
+Tercera línea
+Texto procedente de un StringBuilder
+Ya incluye los salto de líneaescribiendo una cadena desde Java
+Segunda frase
+Tercera línea
+Texto procedente de un StringBuilder
+Ya incluye los salto de líneaescribiendo una cadena desde Java
+Segunda frase
+Tercera línea
+Texto procedente de un StringBuilder
+Ya incluye los salto de líneaescribiendo una cadena desde Java
+Segunda frase
+Tercera línea
+Texto procedente de un StringBuilder
+Ya incluye los salto de líneaescribiendo una cadena desde Java
+Segunda frase
+Tercera línea
+Texto procedente de un StringBuilder
+Ya incluye los salto de líneaescribiendo una cadena desde Java
+Segunda frase
+Tercera línea
+Texto procedente de un StringBuilder
+Ya incluye los salto de línea
