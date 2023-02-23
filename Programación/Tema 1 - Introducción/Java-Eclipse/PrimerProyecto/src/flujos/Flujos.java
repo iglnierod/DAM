@@ -100,7 +100,7 @@ public class Flujos {
 	public static void main(String[] args) {
 //		leerFicheroTexto();
 //		escribirFicheroTexto();
-//		leerConBuffer();
-		escribirConBuffer();
+		leerConBuffer();
+//		escribirConBuffer();
 	}
 }
