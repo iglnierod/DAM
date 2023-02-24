@@ -9,12 +9,23 @@ public class ej3 {
 		try (BufferedReader br = new BufferedReader(new FileReader(rutaFichero))) {
 			String linea;
 			String test = "";
-			while((linea = br.readLine()) != null) {
+			while ((linea = br.readLine()) != null) {
 				test += linea + " ";
 			}
-			System.out.println(test);
+			String[] array = test.split(" ");
+			double suma = 0;
+			for (int i = 0; i < array.length; i++) {
+				suma += Double.parseDouble(array[i]);
+				if (i == array.length - 1)
+					System.out.print(array[i]);
+				else
+					System.out.print(array[i] + ", ");
+			}
+			System.out.println(String.format("\nMedia: %1.2f", (suma/array.length)));
 		} catch (IOException e) {
 			System.out.println("No se ha encontrado el archivo: " + rutaFichero);
+		} catch (NumberFormatException e) {
+			System.out.println("No se ha podido convertir el texto a double");
 		}
 	}
 
