@@ -5,6 +5,7 @@ import java.io.*;
 
 public class ej5 {
 	static String ruta = "C:\\Users\\DAM1_Alu07\\Desktop\\DAM_git\\Programación\\Tema 1 - Introducción\\Java-Eclipse\\PrimerProyecto\\src\\ejerciciosV\\ficheros\\ej5.txt";
+	static String ruta2 = "E:\\DAM 1\\Programación\\Tema 1 - Introducción\\Java-Eclipse\\PrimerProyecto\\src\\ejerciciosV\\ficheros\\ej5.txt";
 	static Scanner sc = new Scanner(System.in);
 	
 	public static void metodo1(){
@@ -28,9 +29,9 @@ public class ej5 {
 			} while (!numAsignado);
 
 		}
-		try (BufferedWriter bw = new BufferedWriter(new FileWriter(ruta))) {
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(ruta2))) {
 			bw.write(string);
-			System.out.println("Se han guardado 10 números reales en: " + ruta);
+			System.out.println("Se han guardado 10 números reales en: " + ruta2);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
