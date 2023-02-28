@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE menu[
+<!ELEMENT menu (entrantes, primeros+, segundos, postres, bebidas*, cafe?)>
+<!ELEMENT entrantes (entrante+, bebida)>
+<!ELEMENT entrante (#PCDATA)>
+<!ELEMENT bebida (#PCDATA)>
+<!ATTLIST bebida alcohol (si|no) #REQUIRED>
+<!ELEMENT primeros (primero+, sorbete?)>
+<!ELEMENT primero (#PCDATA)>
+<!ELEMENT sorbete (#PCDATA)>
+<!ATTLIST sorbete alcohol (si|no) #REQUIRED>
+<!ELEMENT segundos (segundo)>
+<!ELEMENT segundo (#PCDATA)>
+<!ATTLIST segundo tipo (carne|pescado|vegetal) #REQUIRED>
+<!ELEMENT postres ((helado|macedonia), tarta)>
+<!ELEMENT helado (#PCDATA)>
+<!ATTLIST helado sabor CDATA #IMPLIED>
+<!ELEMENT macedonia (#PCDATA)>
+<!ELEMENT tarta (#PCDATA)>
+<!ELEMENT bebidas (bebida+)>
+<!ELEMENT cafe (#PCDATA)>
+]>
+
+<menu>
+
+  <entrantes>
+    <entrante>Ensalada de frutas</entrante>
+    <entrante>Queso manchego</entrante>
+    <bebida alcohol="no">Agua mineral</bebida>
+  </entrantes>
+
+  <primeros>
+    <primero>Crema de calabaza</primero>
+    <primero>Rollitos de primavera</primero>
+    <sorbete alcohol="no"/>
+  </primeros>
+
+  <segundos>
+    <segundo tipo="pescado">Lubina a la plancha</segundo>
+  </segundos>
+
+  <postres>
+    <helado sabor="vainilla">Helado de vainilla</helado>
+    <tarta>Tarta de queso</tarta>
+  </postres>
+
+  <bebidas>
+    <bebida alcohol="no">Coca-Cola</bebida>
+    <bebida alcohol="si">Cerveza</bebida>
+    <bebida alcohol="no">Agua con gas</bebida>
+  </bebidas>
+
+  <cafe>Café con leche</cafe>
+
+</menu>
