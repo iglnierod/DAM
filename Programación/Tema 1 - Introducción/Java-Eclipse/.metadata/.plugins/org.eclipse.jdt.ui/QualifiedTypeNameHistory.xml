@@ -40,7 +40,11 @@
     <fullyQualifiedTypeName name="java.awt.BufferCapabilities"/>
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="java.io.FileReader"/>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+=======
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+>>>>>>> 32df9d76bada3e2fa04b8b43c35915fd8fad6f4a
     <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
@@ -49,10 +53,15 @@
     <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthToggleButtonUI"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
-    <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+    <fullyQualifiedTypeName name="java.lang.SecurityException"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.lang.SecurityException"/>
+=======
+    <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+>>>>>>> 32df9d76bada3e2fa04b8b43c35915fd8fad6f4a
 </qualifiedTypeNameHistroy>

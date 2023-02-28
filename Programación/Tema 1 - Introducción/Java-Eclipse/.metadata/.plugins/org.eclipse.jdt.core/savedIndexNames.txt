@@ -3,6 +3,10 @@ INDEX VERSION 1.131+C:\Users\DAM1_Alu07\Desktop\DAM_git\Programación\Tema 1 - In
 1446560325.index
 92491906.index
 3585759780.index
+<<<<<<< HEAD
 2461555211.index
 3074109613.index
 2326369150.index
+=======
+3009453861.index
+>>>>>>> 32df9d76bada3e2fa04b8b43c35915fd8fad6f4a
