@@ -6,6 +6,15 @@ import java.io.*;
 public class ej6 {
 	private static Scanner sc = new Scanner(System.in);
 
+	private static String getTipoFichero(String ruta) {
+		String extension = ".";
+		int i = ruta.lastIndexOf('.');
+		if (i > 0) {
+			extension = ruta.substring(i);
+		}
+		return extension;
+	}
+
 	public static boolean ocultarTexto(String ruta) {
 		File imagen = new File(ruta);
 
@@ -18,7 +27,7 @@ public class ej6 {
 		byte[] datos = {};
 		int contador = 0;
 
-		try (FileInputStream fis = new FileInputStream(ruta);) {
+		try (BufferedInputStream fis = new BufferedInputStream(new FileInputStream(ruta))) {
 			datos = new byte[fis.available()];
 
 			// Copiar datos de la imagen original a un array byte[]
@@ -42,17 +51,22 @@ public class ej6 {
 
 			// Pedir nombre para crear la imagen
 			System.out.println("Introduzca el nombre con el que desea crear la imagen: ");
-			File imagenConTexto = new File(imagen.getParent() + File.separator + sc.nextLine() + ".jpg");
+			File imagenConTexto = new File(imagen.getParent(), sc.nextLine() + getTipoFichero(ruta));
 
 			try (FileOutputStream fos = new FileOutputStream(imagenConTexto)) {
 				// Escribir datos de la imagen
 				fos.write(datos);
-				
-				byte[] textoEnBytes = texto.getBytes();
-				// Escribir texto al final de la imagen
-				fos.write(textoEnBytes);
+
+				for (int i = 0; i < texto.length(); i++) {
+					fos.write(texto.charAt(i));
+				}
+
+//				byte[] textoEnBytes = texto.getBytes();
+//				// Escribir texto al final de la imagen
+//				fos.write(textoEnBytes);
+
 			}
-			
+
 		} catch (IOException e) {
 			e.printStackTrace();
 			return false;
@@ -69,9 +83,9 @@ public class ej6 {
 		String ruta = "";
 		boolean operacionCorrecta = false;
 		do {
-		    System.out.print("Introduce la ruta de la imagen: ");
-		    ruta = sc.nextLine();
-		    operacionCorrecta = ocultarTexto(ruta);
+			System.out.print("Introduce la ruta de la imagen: ");
+			ruta = sc.nextLine();
+			operacionCorrecta = ocultarTexto(ruta);
 		} while (!operacionCorrecta);
 	}
 }

@@ -1,67 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.function.Function"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="Objetos.RectanguloTexto"/>
-    <fullyQualifiedTypeName name="Objetos.CuentaBancaria"/>
-    <fullyQualifiedTypeName name="Objetos.Temperatura"/>
-    <fullyQualifiedTypeName name="Objetos.Jugador"/>
-    <fullyQualifiedTypeName name="documentos.gestion_economica.Factura"/>
-    <fullyQualifiedTypeName name="documentos.gestionEconomica.Recibo"/>
-    <fullyQualifiedTypeName name="clasesAbstractas.Circulo"/>
-    <fullyQualifiedTypeName name="polimorfismo.Triangulo"/>
-    <fullyQualifiedTypeName name="polimorfismo.Circulo"/>
-    <fullyQualifiedTypeName name="intefaces.Triangulo"/>
-    <fullyQualifiedTypeName name="intefaces.OperacionesBasicas"/>
-    <fullyQualifiedTypeName name="intefaces.Rectangulo"/>
-    <fullyQualifiedTypeName name="intefaces2.DatosCentroDeEstudios"/>
-    <fullyQualifiedTypeName name="intefaces2.CalculosCentroDeEstudios"/>
-    <fullyQualifiedTypeName name="intefaces2.ClaseCentroDeEstudios"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="ejercicio23POO.EmpleadoProduccion"/>
-    <fullyQualifiedTypeName name="ejercicio23POO.EmpleadoDistribuccion"/>
-    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-    <fullyQualifiedTypeName name="Ejercicio27POO.Caminante"/>
-    <fullyQualifiedTypeName name="Ejercicio27POO.Mamifero"/>
-    <fullyQualifiedTypeName name="Ejercicio27POO.Murcielago"/>
-    <fullyQualifiedTypeName name="enumerados.Demarcacion"/>
-    <fullyQualifiedTypeName name="ejercicio30POO.TipoDeMadera"/>
-    <fullyQualifiedTypeName name="interfaces3.Escribir"/>
-    <fullyQualifiedTypeName name="clasesAnidadas.ClaseExterna.ClaseAnidadaEstatica"/>
-    <fullyQualifiedTypeName name="clasesAnidadas.ClaseExterna"/>
-    <fullyQualifiedTypeName name="Ejercicio25POO.Main"/>
-    <fullyQualifiedTypeName name="lunna.Persona"/>
-    <fullyQualifiedTypeName name="java.lang.Void"/>
-    <fullyQualifiedTypeName name="ej15.Triangulo"/>
-    <fullyQualifiedTypeName name="java.math.BigInteger"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="damd1_06.ProductoUnitario"/>
-    <fullyQualifiedTypeName name="java.lang.AutoCloseable"/>
-    <fullyQualifiedTypeName name="java.awt.BufferCapabilities"/>
-    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
-    <fullyQualifiedTypeName name="java.io.FileReader"/>
-<<<<<<< HEAD
-    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
-=======
-    <fullyQualifiedTypeName name="java.io.IOException"/>
->>>>>>> 32df9d76bada3e2fa04b8b43c35915fd8fad6f4a
-    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
-    <fullyQualifiedTypeName name="java.lang.Double"/>
-    <fullyQualifiedTypeName name="java.io.BufferedReader"/>
-    <fullyQualifiedTypeName name="java.io.FileWriter"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthToggleButtonUI"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
-    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
-    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
-    <fullyQualifiedTypeName name="java.lang.SecurityException"/>
+    <fullyQualifiedTypeName name="java.io.ObjectStreamClass"/>
+    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
-<<<<<<< HEAD
-    <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
-    <fullyQualifiedTypeName name="java.lang.SecurityException"/>
-=======
-    <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
->>>>>>> 32df9d76bada3e2fa04b8b43c35915fd8fad6f4a
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
 </qualifiedTypeNameHistroy>
