@@ -3,7 +3,7 @@ package ejerciciosV.ficheros;
 import java.util.Scanner;
 import java.io.*;
 
-public class ej6 {
+public class ej6ej7 {
 	private static Scanner sc = new Scanner(System.in);
 
 	private static String getTipoFichero(String ruta) {
@@ -15,19 +15,13 @@ public class ej6 {
 		return extension;
 	}
 
-	public static boolean ocultarTexto(String ruta) {
-		File imagen = new File(ruta);
-
-		// Comprobar si la imagen existe
-		if (!imagen.exists()) {
-			System.err.println("La imagen no existe en la ruta: " + ruta);
-			return false;
-		}
+	// EJ6
+	public static void ocultarTexto(File imagen) {
 
 		byte[] datos = {};
 		int contador = 0;
 
-		try (BufferedInputStream fis = new BufferedInputStream(new FileInputStream(ruta))) {
+		try (BufferedInputStream fis = new BufferedInputStream(new FileInputStream(imagen))) {
 			datos = new byte[fis.available()];
 
 			// Copiar datos de la imagen original a un array byte[]
@@ -51,41 +45,69 @@ public class ej6 {
 
 			// Pedir nombre para crear la imagen
 			System.out.println("Introduzca el nombre con el que desea crear la imagen: ");
-			File imagenConTexto = new File(imagen.getParent(), sc.nextLine() + getTipoFichero(ruta));
+			File imagenConTexto = new File(imagen.getParent(), sc.nextLine() + getTipoFichero(imagen.getPath()));
 
 			try (FileOutputStream fos = new FileOutputStream(imagenConTexto)) {
 				// Escribir datos de la imagen
 				fos.write(datos);
 
-				for (int i = 0; i < texto.length(); i++) {
-					fos.write(texto.charAt(i));
-				}
+//				for (int i = 0; i < texto.length(); i++) {
+//					fos.write(texto.charAt(i));
+//				}
 
+				// ====== FALLO CON LA LETRA Ñ ======
 //				byte[] textoEnBytes = texto.getBytes();
 //				// Escribir texto al final de la imagen
 //				fos.write(textoEnBytes);
 
 			}
 
+			System.out.println("Se ha creado la imagen correctamente.");
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			System.err.println("No se tienen permisos para ver la imagen.");
+		}
+	}
+
+	// EJ7
+	public static boolean revelarTexto(File file) {
+		try (FileInputStream fis = new FileInputStream(file)) {
+			char[] datos = new char[100];
+			fis.skipNBytes((file.length() - 100));
+			for (int i = 0; i < 100; i++)
+				datos[i] = (char) fis.read();
+
+			for (char c : datos)
+				System.out.print(c);
+		} catch (FileNotFoundException e) {
+			System.err.println("La imagen no existe en la ruta: " + file.getPath());
+			return false;
 		} catch (IOException e) {
 			e.printStackTrace();
 			return false;
-		} catch (SecurityException e) {
-			System.err.println("No se tienen permisos para ver la imagen.");
-			return false;
 		}
-		System.out.println("Se ha creado la imagen correctamente.");
 		return true;
 	}
 
 	// MAIN
 	public static void main(String[] args) {
-		String ruta = "";
-		boolean operacionCorrecta = false;
+		File file = null;
 		do {
 			System.out.print("Introduce la ruta de la imagen: ");
-			ruta = sc.nextLine();
-			operacionCorrecta = ocultarTexto(ruta);
-		} while (!operacionCorrecta);
+			file = new File(sc.nextLine());
+			if (!file.exists())
+				System.err.println("La ruta introducida no es correcta");
+		} while (!file.exists());
+		ocultarTexto(file);
+
+		do {
+			System.out.print("Introduce la ruta de la imagen: ");
+			file = new File(sc.nextLine());
+			if (!file.exists())
+				System.err.println("La ruta introducida no es correcta");
+		} while (!file.exists());
+		revelarTexto(file);
 	}
+
 }
