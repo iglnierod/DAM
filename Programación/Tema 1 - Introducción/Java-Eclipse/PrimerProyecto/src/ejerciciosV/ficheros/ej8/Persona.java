@@ -1,11 +1,13 @@
 package ejerciciosV.ficheros.ej8;
 
-public class Persona {
+import java.io.Serializable;
+
+public class Persona implements Serializable {
 	private String nombre;
 	private int numHermanos;
 	private Coche[] cochesFavoritos;
 	private Pelicula[] pelisFavoritas;
-	
+
 	public Persona(String nombre, int numHermanos) {
 		super();
 		this.nombre = nombre;
@@ -27,25 +29,26 @@ public class Persona {
 	public void setPelisFavoritas(Pelicula[] pelisFavoritas) {
 		this.pelisFavoritas = pelisFavoritas;
 	}
-	
+
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		
-		sb.append(nombre);
-		if(numHermanos == 0)
-			sb.append(" (hijo único)");
-		else
-			sb.append(numHermanos + " hermano");
-		if(numHermanos > 1)
-			sb.append("s");
-		
-		for(Coche c : cochesFavoritos)
-			sb.append("\t\t\t" + c.toString());
-		
-		for(Pelicula p : pelisFavoritas)
-			sb.append("\t\t\t" + p.toString());
-		
+
+		sb.append(nombre + " ");
+		if (numHermanos == 0) {
+			sb.append("(hijo único)");
+		} else if (numHermanos == 1) {
+			sb.append("(un hermano)");
+		} else {
+			sb.append("(" + numHermanos + " hermanos" + ")");
+		}
+
+		for (Coche c : cochesFavoritos)
+			sb.append("   " + c.toString());
+
+		for (Pelicula p : pelisFavoritas)
+			sb.append("   " + p.toString());
+
 		return sb.toString();
 	}
 }

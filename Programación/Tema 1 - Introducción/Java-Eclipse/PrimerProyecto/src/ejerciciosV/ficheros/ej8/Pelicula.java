@@ -1,6 +1,8 @@
 package ejerciciosV.ficheros.ej8;
 
-public class Pelicula {
+import java.io.Serializable;
+
+public class Pelicula implements Serializable{
 	private String titulo;
 	private int año;
 
