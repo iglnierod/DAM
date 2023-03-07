@@ -38,12 +38,3 @@ select *
 from equipos
 where webOficial like '%.net'
 	  or webOficial like '%.com';
-
-
-
-
-
-
-
-
-
