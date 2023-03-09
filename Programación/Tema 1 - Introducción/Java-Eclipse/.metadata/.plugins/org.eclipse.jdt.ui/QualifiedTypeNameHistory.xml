@@ -13,7 +13,12 @@
     <fullyQualifiedTypeName name="ejerciciosV.ficheros.ej8.Pelicula"/>
     <fullyQualifiedTypeName name="ejerciciosV.ficheros.ej8.Persona"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
-    <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="colecciones.Cola"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="ColoresPrioridad"/>
+    <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="colecciones.Producto"/>
 </qualifiedTypeNameHistroy>

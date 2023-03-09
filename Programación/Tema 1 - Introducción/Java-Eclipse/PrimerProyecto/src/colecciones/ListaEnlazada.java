@@ -116,18 +116,83 @@ public class ListaEnlazada {
 			System.out.print(s + " ");
 		System.out.println("\nlistaVerbos: " + listaVerbos);
 
-		
 		List<String> sublista = colores.subList(3, 8);
 		System.out.println("\ncolores: " + colores);
 		System.out.println("sublista: " + sublista);
-		
+
 		System.out.println("\nSubstituir en sublista: " + sublista.set(1, "morado"));
-		System.out.println("sublista: " + sublista);	
-		System.out.println("colores: " + colores);	
-		
-		System.out.println("\nSubstituir en lista original: " + colores.set(5, "salmón"));
-		System.out.println("sublista: " + sublista);	
+		System.out.println("sublista: " + sublista);
 		System.out.println("colores: " + colores);
+
+		System.out.println("\nSubstituir en lista original: " + colores.set(5, "salmón"));
+		System.out.println("sublista: " + sublista);
+		System.out.println("colores: " + colores);
+
+		// COLAS
+
+		Cola<String> colaNombres = new Cola<>();
+		colaNombres.encolar("Ana");
+		colaNombres.encolar("Pedro");
+		colaNombres.encolar("Lucía");
+		colaNombres.encolar("Mercedes");
+		colaNombres.encolar("Mario");
+
+		System.out.println("colaNombres: " + colaNombres);
+		System.out.println("Le toca a: " + colaNombres.cabeza());
+		System.out.println("Se atienda a: " + colaNombres.desencolar());
+		System.out.println("Se atienda a: " + colaNombres.desencolar());
+		colaNombres.encolar("Juan");
+		System.out.println("colaNombres: " + colaNombres);
+
+		// PILA
+		Pila<String> pilaCartas = new Pila<>();
+		pilaCartas.apilar("Tres bastos");
+		pilaCartas.apilar("Sota oros");
+		pilaCartas.apilar("Rey copas");
+		pilaCartas.apilar("Siete oros");
+		pilaCartas.apilar("Caballo espadas");
+		System.out.println("pilaCartas: " + pilaCartas);
+		System.out.println("saco carta: " + pilaCartas.desapilar());
+		System.out.println("saco carta: " + pilaCartas.desapilar());
+		pilaCartas.apilar("Seis bastos");
+		System.out.println("pilaCartas: " + pilaCartas);
+		System.out.println("La carta que está encima del todo es: " + pilaCartas.cabeza());
+
+		// PrirityQueue
+		PriorityQueue<Integer> enteros = new PriorityQueue<>();
+		enteros.add(7);
+//		enteros.add(null);
+		enteros.add(4);
+		enteros.add(11);
+		enteros.add(6);
+		enteros.add(7);
+		enteros.add(2);
+		enteros.add(9);
+
+		System.out.println("enteros: " + enteros);
+		while (!enteros.isEmpty()) {
+			System.out.print(enteros.poll() + " ");
+		}
+
+		enum ColoresPrioridad {
+			ROJO, VERDE, AZUL, AMARILLO, VIOLETA, BLANCO, NEGRO
+		};
+
+		PriorityQueue<ColoresPrioridad> cores = new PriorityQueue<>();
+		cores.add(ColoresPrioridad.VERDE);
+		cores.add(ColoresPrioridad.AMARILLO);
+		cores.add(ColoresPrioridad.AMARILLO);
+		cores.add(ColoresPrioridad.NEGRO);
+		cores.add(ColoresPrioridad.VERDE);
+		cores.add(ColoresPrioridad.AZUL);
+		cores.add(ColoresPrioridad.BLANCO);
+		cores.add(ColoresPrioridad.ROJO);
+		cores.add(ColoresPrioridad.AMARILLO);
+
+		System.out.println("\ncores: " + cores);
+		while (!cores.isEmpty())
+			System.out.print(cores.poll() + " ");
+
 	}
 
 }

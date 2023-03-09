@@ -1,0 +1,3 @@
+ideas consultas:
+clasificacion pilotos/equipos
+circuitos que tienen y no tiene gp (left join/union/right join)
