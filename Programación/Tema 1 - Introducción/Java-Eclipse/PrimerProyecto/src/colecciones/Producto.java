@@ -1,6 +1,8 @@
 package colecciones;
 
-public class Producto {
+import java.util.Objects;
+
+public class Producto implements Comparable<Producto> {
 	private String nombre;
 	private int id;
 	private double precio;
@@ -51,4 +53,25 @@ public class Producto {
 		return cantidad + " " + "nombre " + nombre + " (" + id + ") " + precio + "€";
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Producto other = (Producto) obj;
+		return id == other.id;
+	}
+
+	@Override
+	public int compareTo(Producto o) {
+		return this.id - o.id;
+	}
 }
