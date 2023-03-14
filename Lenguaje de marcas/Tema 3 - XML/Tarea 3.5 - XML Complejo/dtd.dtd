@@ -1,0 +1,28 @@
+<!ELEMENT steam-user (id, name, email, machines, friends, games-played, game-library, country)>
+<!ATTLIST steam-user gender CDATA #REQUIRED
+         xmlns CDATA #FIXED "namespace_whatever"
+         xmlns:xsi CDATA #FIXED "http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation CDATA #FIXED "schema.xsd">
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT machines (machine+)>
+<!ELEMENT machine (os, cpu, gpu, ram, storage?)>
+<!ATTLIST machine id CDATA #REQUIRED>
+<!ELEMENT os (#PCDATA)>
+<!ELEMENT cpu (#PCDATA)>
+<!ELEMENT gpu (#PCDATA)>
+<!ELEMENT ram (#PCDATA)>
+<!ELEMENT storage (#PCDATA)>
+<!ELEMENT friends (#PCDATA)>
+<!ELEMENT games-played (#PCDATA)>
+<!ELEMENT game-library (game+)>
+<!ATTLIST game-library total CDATA #REQUIRED>
+<!ELEMENT game (title, genre, developer, publisher, release-date, price)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT developer (#PCDATA)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT release-date (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT country (#PCDATA)>

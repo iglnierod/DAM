@@ -1,0 +1,73 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="steam-user">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="id" type="xs:string"/>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="email" type="xs:string"/>
+        <xs:element name="machines">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="machine" maxOccurs="3">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="os" type="xs:string"/>
+                    <xs:element name="cpu" type="xs:string"/>
+                    <xs:element name="gpu" type="xs:string"/>
+                    <xs:element name="ram">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                          <xs:minInclusive value="1"/>
+                          <xs:maxInclusive value="64"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="storage" type="xs:string" minOccurs="0"/>
+                  </xs:sequence>
+                  <xs:attribute name="id" type="xs:integer" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="friends" type="xs:string" minOccurs="0"/>
+        <xs:element name="games-played">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="0"/>
+              <xs:maxInclusive value="100"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="game-library">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="game" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="title" type="xs:string"/>
+                    <xs:element name="genre" type="xs:string"/>
+                    <xs:element name="developer" type="xs:string"/>
+                    <xs:element name="publisher" type="xs:string"/>
+                    <xs:element name="release-date" type="xs:date"/>
+                    <xs:element name="price">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:decimal">
+                          <xs:minInclusive value="0.00"/>
+                          <xs:maxInclusive value="1000.00"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="total" type="xs:integer" use="required"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="country" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="gender" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
