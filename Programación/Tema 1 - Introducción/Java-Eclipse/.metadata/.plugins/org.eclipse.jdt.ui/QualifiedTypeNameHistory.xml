@@ -12,7 +12,6 @@
     <fullyQualifiedTypeName name="ejerciciosV.ficheros.ej8.Pelicula"/>
     <fullyQualifiedTypeName name="ejerciciosV.ficheros.ej8.Persona"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
     <fullyQualifiedTypeName name="colecciones.Cola"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
@@ -33,4 +32,8 @@
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

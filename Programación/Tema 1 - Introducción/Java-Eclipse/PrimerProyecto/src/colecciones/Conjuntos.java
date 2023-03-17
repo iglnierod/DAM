@@ -50,7 +50,7 @@ public class Conjuntos {
 
 		System.out.println("colores: " + colores);
 
-		ComparadorPrecioAscendente cmp = new ComparadorPrecioAscendente();
+//		ComparadorPrecioAscendente cmp = new ComparadorPrecioAscendente();
 		Set<Producto> prods = new TreeSet<>();
 		prods = new TreeSet<>(new Comparator<Producto>() {
 			@Override
@@ -60,7 +60,7 @@ public class Conjuntos {
 		});
 
 		prods = new TreeSet<>(Collections.reverseOrder());
-		prods = new TreeSet<>(Collections.reverseOrder(new ComparadorPrecioAscendente()));
+//		prods = new TreeSet<>(Collections.reverseOrder(new ComparadorPrecioAscendente()));
 
 		// OPERACIONES LANDA
 		prods = new TreeSet<>((a, b) -> Double.compare(a.getPrecio(), b.getPrecio())); // ORDENA POR PRECIO MENOR A
