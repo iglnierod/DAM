@@ -1,0 +1,26 @@
+- name: Rickard Stark
+  spouse: Lyarra Stark
+  children:
+    - name: Brandon Stark
+      spouse: Catelyn Stark
+      children:
+        - name: Robb Stark
+        - name: Sansa Stark
+        - name: Arya Stark
+        - name: Bran Stark
+        - name: Rickon Stark
+    - name: Eddard Stark
+      spouse: Catelyn Stark
+      children:
+        - name: Robb Stark
+        - name: Sansa Stark
+        - name: Arya Stark
+        - name: Bran Stark
+        - name: Rickon Stark
+    - name: Lyanna Stark
+      spouse: Rhaegar Targaryen
+      children:
+        - name: Jon Snow (Aegon Targaryen)
+- name: Benjen Stark
+- name: Brandon Stark (Bran the Builder)
+- name: Artos Stark
