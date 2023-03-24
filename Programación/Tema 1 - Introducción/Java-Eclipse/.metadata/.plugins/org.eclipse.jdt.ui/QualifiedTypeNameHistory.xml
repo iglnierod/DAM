@@ -37,4 +37,17 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.LinkedHashSet"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="ventanas.Ventana"/>
+    <fullyQualifiedTypeName name="java.awt.Toolkit"/>
+    <fullyQualifiedTypeName name="java.awt.Image"/>
+    <fullyQualifiedTypeName name="ventanas.PanelPrincipal"/>
+    <fullyQualifiedTypeName name="java.awt.geom.RoundRectangle2D"/>
+    <fullyQualifiedTypeName name="java.awt.geom.RoundRectangle2D.Double"/>
+    <fullyQualifiedTypeName name="java.awt.Shape"/>
+    <fullyQualifiedTypeName name="java.awt.geom.Ellipse2D.Double"/>
+    <fullyQualifiedTypeName name="java.awt.geom.Rectangle2D"/>
+    <fullyQualifiedTypeName name="java.awt.geom.Rectangle2D.Double"/>
+    <fullyQualifiedTypeName name="java.awt.geom.Ellipse2D"/>
+    <fullyQualifiedTypeName name="java.awt.Color"/>
+    <fullyQualifiedTypeName name="java.awt.Rectangle"/>
 </qualifiedTypeNameHistroy>
