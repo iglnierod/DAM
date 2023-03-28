@@ -11,13 +11,20 @@ public class PruebasFrames {
 
 	public static void main(String[] args) {
 		Ventana ventana = new Ventana();
+		mostrarTiposLetra();
 	}
-
+	
+	// Recorrer fuentes del sistema
+	public static void mostrarTiposLetra() {
+		for (String fuente : GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames()) {
+			System.out.println(fuente);
+		}
+	}
 }
 
 class Ventana extends JFrame {
 	public Ventana() {
-		setSize(385, 265);
+		setSize(500, 600);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 //		add(new PanelPrincipal());
 		add(new BanderaJapon());
@@ -32,6 +39,8 @@ class Ventana extends JFrame {
 	public void centrarVentana() {
 		this.setLocationRelativeTo(null);
 	}
+	
+	
 }
 
 class PanelPrincipal extends JPanel {
@@ -71,6 +80,14 @@ class BanderaJapon extends JPanel {
 		g.fillRect(10, 10, 350, 200);
 		g.setColor(Color.RED);
 		g.fillOval((10 + 350 - 100) / 2, (10 + 200 - 100) / 2, 100, 100);
+		
+		Graphics2D g2d = (Graphics2D)g;
+		Font fuente = new Font("Arial", Font.ITALIC, 19);
+		g2d.setFont(fuente);
+		g2d.drawString("Bandera de Japón", 10, 230);
+		g2d.setFont(new Font("Times New Roman", Font.PLAIN, 16));
+		g2d.setColor(Color.BLACK);
+		g2d.drawString("Bandera de Japón 2", 10, 245);
 	}
 
 }
