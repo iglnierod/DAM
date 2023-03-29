@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gráfica Pulpo</title>
+</head>
+
+<body>
+    <svg width="550" height="550">
+        <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6"
+                orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 Z" fill="black" />
+            </marker>
+    
+            <marker id="arrow-red" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6"
+                orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 Z" fill="red" />
+            </marker>
+    
+            <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4">
+                <circle cx="5" cy="5" r="5" fill="red" />
+            </marker>
+        </defs>
+        <!-- LINEAS PRECIOS -->
+        <line x1="50" y1="270" x2="500" y2="270" stroke="rgba(156,156,156,0.9)" />
+        <line x1="50" y1="190" x2="500" y2="190" stroke="rgba(156,156,156,0.9)" />
+        <line x1="50" y1="320" x2="500" y2="320" stroke="rgba(156,156,156,0.9)" />
+    
+        <!-- PRECIO RACION -->
+        <line x1="50" y1="250" x2="500" y2="250" stroke="green" />
+    
+        <!-- Ejes de cooredenadas x-y -->
+        <line x1="50" y1="500" x2="500" y2="500" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+        <line x1="50" y1="500" x2="50" y2="50" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+    
+        <!-- Datos -->
+        <polyline points="70,270 95,265 160,265 230,190 310,240 360,230 390,250 410,320 450,215 470,270" stroke="blue"
+            stroke-width="2" fill="none" marker-mid="url(#dot)" marker-start="url(#dot)" marker-end="url(#arrow-red)" />
+    
+        <!-- Años -->
+        <text x="65" y="520" font-family="Arial" style="letter-spacing: 10px;">2018|2019|2020|2021|2022</text>
+        <!-- PRECIOS -->
+        <text x="30" y="270" font-family="Arial" font-size="20px">9</text>
+        <text x="20" y="190" font-family="Arial" font-size="20px">13</text>
+        <text x="30" y="320" font-family="Arial" font-size="20px">6</text>
+    
+        <!-- LEYENDA -->
+        <rect x="300" width="150" height="100" fill="none" stroke="black" stroke-width="2" />
+        <line x1="320" y1="30" x2="350" y2="30" stroke-width="2" stroke="green" />
+        <text x="370" y="35" font-family="Arial">Ración</text>
+        <line x1="320" y1="70" x2="350" y2="70" stroke-width="2" stroke="blue" />
+        <text x="370" y="75" font-family="Arial">kg/€</text> font-family="Arial"
+    </svg>
+</body>
+
+</html>
