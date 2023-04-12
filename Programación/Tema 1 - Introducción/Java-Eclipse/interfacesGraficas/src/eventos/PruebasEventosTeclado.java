@@ -39,8 +39,8 @@ class TeclasPulsados implements KeyListener {
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		int codigoTecla = e.getKeyCode();
-		System.out.println("Código de tecla: " + codigoTecla);
+//		int codigoTecla = e.getKeyCode();
+//		System.out.println("Código de tecla: " + codigoTecla);
 
 	}
 	

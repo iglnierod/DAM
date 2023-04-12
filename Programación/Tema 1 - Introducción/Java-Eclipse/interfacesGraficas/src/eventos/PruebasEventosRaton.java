@@ -74,7 +74,7 @@ class EventosRaton implements MouseListener, MouseMotionListener {
 
 	@Override
 	public void mouseMoved(MouseEvent e) {
-		System.out.println("Moviendo el ratón");
+//		System.out.println("Moviendo el ratón");
 	}
 	
 }

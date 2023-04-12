@@ -16,7 +16,7 @@ class VentanaBoton extends JFrame {
 		setTitle("Probando eventos Action");
 		setBounds(10, 10, 400, 300);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		add(new PanelBotonesSinListener());
+		add(new PanelBotones());
 
 		setVisible(true);
 	}
