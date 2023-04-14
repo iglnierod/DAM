@@ -28,25 +28,29 @@ class Panel extends JPanel implements ActionListener {
 	JButton boton = new JButton("Mostrar hora");
 	JButton botonA = new JButton("A");
 	JButton botonB = new JButton("B");
+	JTextField tfield = new JTextField("Hola que tal", 17);
 	JLabel label = new JLabel();
 
 	public Panel() {
 		botonA.addActionListener(this);
 		add(botonA);
-		
+
 		boton.addActionListener(this);
 		add(boton);
-		
+
 		botonB.addActionListener(this);
 		add(botonB);
-		
+
+		tfield.addActionListener(this);
+		add(tfield);
+
 		add(label);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		switch (e.getActionCommand()) {
-		case "A": 
+		case "A":
 			label.setText("Se ha pulsado el botón A");
 			break;
 		case "B":
@@ -56,5 +60,9 @@ class Panel extends JPanel implements ActionListener {
 			label.setText(LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss.SSS")));
 			break;
 		}
+		Object source = e.getSource();
+		if (source == tfield)
+			label.setText("El texto es: " + tfield.getText());
+		
 	}
 }
