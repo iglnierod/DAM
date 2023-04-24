@@ -26,7 +26,7 @@ class VentanaEj2 extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(new GridLayout(1, 2));
 		
-		cmbMarcas.setBounds(0, 0, 30, 10);
+		cmbMarcas.setPreferredSize(new Dimension(100,25));;
 		
 		addToPnl(pnlIntroducir, lblTexto = new JLabel("Introduzca una marca de coches"));
 		addToPnl(pnlIntroducir, txfMarca);
