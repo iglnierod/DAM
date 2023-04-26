@@ -13,7 +13,7 @@ public class Menus {
 class VentanaMenus extends JFrame {
 	public VentanaMenus() {
 		setTitle("Menús");
-		setBounds(1425, 250, 500, 200);
+		setBounds(1425, 250, 500, 500);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
 //		MENUS
@@ -111,6 +111,57 @@ class VentanaMenus extends JFrame {
 		
 		JPanel pnlPrincipal = new JPanel();
 		pnlPrincipal.setComponentPopupMenu(pupSaludo);
+		
+		JPopupMenu pupColores = new JPopupMenu();
+		JMenuItem mniRojo = new JMenuItem("Rojo");
+		pupColores.add(mniRojo);
+		
+		pnlPrincipal.setComponentPopupMenu(pupColores);
+		
+		mniRojo.addActionListener(new ActionListener() {			
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				pnlPrincipal.setBackground(Color.RED);
+			}
+		});
+		
+		JPanel pnlColor1 = new JPanel();
+		JPanel pnlColor2 = new JPanel();
+		
+		pnlPrincipal.setLayout(new GridLayout(2, 2));
+		pnlPrincipal.add(pnlColor1);
+		pnlPrincipal.add(new JLabel());
+		pnlPrincipal.add(new JLabel());
+		pnlPrincipal.add(pnlColor2);
+		
+		JPopupMenu pupColor1 = new JPopupMenu();
+		JMenuItem mniAzul = new JMenuItem("Azul");
+		pupColor1.add(mniAzul);
+		
+		mniAzul.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				pnlColor1.setBackground(Color.BLUE);
+			}
+		});
+		
+		JPopupMenu pupColor2 = new JPopupMenu();
+		JMenuItem mniAmarillo = new JMenuItem("Amarillo");
+		pupColor2.add(mniAmarillo);
+		
+		mniAmarillo.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				pnlColor2.setBackground(Color.YELLOW);
+			}
+		});
+		
+		pnlColor1.setComponentPopupMenu(pupColor1);
+		pnlColor2.setComponentPopupMenu(pupColor2);
+		
 		
 		getContentPane().add(pnlPrincipal, BorderLayout.CENTER);
 		getContentPane().add(mnbBarraMenu, BorderLayout.NORTH);
