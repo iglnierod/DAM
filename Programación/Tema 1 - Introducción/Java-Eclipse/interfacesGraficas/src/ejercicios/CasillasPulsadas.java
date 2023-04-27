@@ -20,17 +20,15 @@ class VentanaCasillasPulsadas extends JFrame {
 
 		add(new Cuadricula(), BorderLayout.CENTER);
 		add(new Contadores(), BorderLayout.SOUTH);
-		pack();
 		setVisible(true);
 	}
 
 	class Cuadricula extends JPanel {
-		private JPanel pnlCuadricula = new JPanel(new GridLayout(9, 9));
-		private final int COLS = 9;
 		private final int ROWS = 9;
+		private final int COLS = 9;
 		
 		public Cuadricula() {
-			this.setLayout(new GridLayout(9, 9));
+			this.setLayout(new GridLayout(ROWS, COLS));
 			boolean blancaUltima = false;
 			for (int i = 0; i < COLS; i++)
 				for (int j = 0; j < ROWS; j++)

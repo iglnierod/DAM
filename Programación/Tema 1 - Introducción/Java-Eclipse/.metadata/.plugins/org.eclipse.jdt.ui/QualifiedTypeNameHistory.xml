@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.swing.text.Document"/>
-    <fullyQualifiedTypeName name="javax.swing.event.DocumentListener"/>
-    <fullyQualifiedTypeName name="ejercicios.VentanaFormulario"/>
-    <fullyQualifiedTypeName name="ejercicios.PanelFormulario"/>
-    <fullyQualifiedTypeName name="ejercicios.PanelRegistro"/>
-    <fullyQualifiedTypeName name="componentes.VentanaAreaDeTexto"/>
-    <fullyQualifiedTypeName name="componentes.PanelAreaTexto"/>
     <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
     <fullyQualifiedTypeName name="java.nio.ByteOrder"/>
     <fullyQualifiedTypeName name="java.awt.Font"/>
@@ -25,13 +18,11 @@
     <fullyQualifiedTypeName name="componentes.VentanaDeslizantes"/>
     <fullyQualifiedTypeName name="javax.swing.JSlider"/>
     <fullyQualifiedTypeName name="javax.swing.border.EmptyBorder"/>
-    <fullyQualifiedTypeName name="javax.swing.BoxLayout"/>
     <fullyQualifiedTypeName name="ejercicios.VentanaEj1"/>
     <fullyQualifiedTypeName name="ejercicios.VentanaEj2"/>
     <fullyQualifiedTypeName name="javax.swing.JTextField"/>
     <fullyQualifiedTypeName name="javax.swing.JButton"/>
     <fullyQualifiedTypeName name="javax.swing.JComboBox"/>
-    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
     <fullyQualifiedTypeName name="javax.swing.SpinnerModel"/>
     <fullyQualifiedTypeName name="javax.swing.SpinnerListModel"/>
     <fullyQualifiedTypeName name="javax.swing.event.ChangeListener"/>
@@ -39,7 +30,6 @@
     <fullyQualifiedTypeName name="javax.swing.SpinnerNumberModel"/>
     <fullyQualifiedTypeName name="javax.swing.JSpinner"/>
     <fullyQualifiedTypeName name="componentes.VentanaSpinner.SpinnerNumberModelInvertido"/>
-    <fullyQualifiedTypeName name="java.awt.Dimension"/>
     <fullyQualifiedTypeName name="javax.swing.JMenuBar"/>
     <fullyQualifiedTypeName name="javax.swing.JMenu"/>
     <fullyQualifiedTypeName name="javax.swing.JSeparator"/>
@@ -49,15 +39,25 @@
     <fullyQualifiedTypeName name="java.awt.event.InputEvent"/>
     <fullyQualifiedTypeName name="javax.swing.Icon"/>
     <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
-    <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="componentes.VentanaMenus"/>
     <fullyQualifiedTypeName name="ejercicios.VentanaRGBA"/>
     <fullyQualifiedTypeName name="componentes.Menus"/>
-    <fullyQualifiedTypeName name="java.awt.GridLayout"/>
-    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
     <fullyQualifiedTypeName name="javax.swing.JPopupMenu"/>
     <fullyQualifiedTypeName name="javax.swing.JMenuItem"/>
     <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
     <fullyQualifiedTypeName name="java.awt.Label"/>
+    <fullyQualifiedTypeName name="ejercicios.VentanaLienzo"/>
+    <fullyQualifiedTypeName name="java.awt.event.MouseListener"/>
+    <fullyQualifiedTypeName name="ejercicios.PanelContadores"/>
+    <fullyQualifiedTypeName name="ejercicios.PanelLienzo.Pixel"/>
+    <fullyQualifiedTypeName name="java.awt.event.MouseAdapter"/>
+    <fullyQualifiedTypeName name="ejercicios.Lienzo"/>
+    <fullyQualifiedTypeName name="ejercicios.PanelLienzo.PanelContadores"/>
+    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
+    <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+    <fullyQualifiedTypeName name="javax.swing.BoxLayout"/>
+    <fullyQualifiedTypeName name="java.awt.GridLayout"/>
+    <fullyQualifiedTypeName name="java.awt.Dimension"/>
 </qualifiedTypeNameHistroy>
