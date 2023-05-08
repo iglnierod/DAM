@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="ejercicios.VentanaEj1"/>
-    <fullyQualifiedTypeName name="ejercicios.VentanaEj2"/>
-    <fullyQualifiedTypeName name="javax.swing.JComboBox"/>
-    <fullyQualifiedTypeName name="javax.swing.SpinnerModel"/>
-    <fullyQualifiedTypeName name="javax.swing.SpinnerListModel"/>
     <fullyQualifiedTypeName name="javax.swing.SpinnerDateModel"/>
     <fullyQualifiedTypeName name="componentes.VentanaSpinner.SpinnerNumberModelInvertido"/>
     <fullyQualifiedTypeName name="javax.swing.JMenuBar"/>
@@ -57,7 +52,12 @@
     <fullyQualifiedTypeName name="javax.swing.JTextField"/>
     <fullyQualifiedTypeName name="javax.swing.JLabel"/>
     <fullyQualifiedTypeName name="javax.swing.Box"/>
-    <fullyQualifiedTypeName name="javax.swing.JButton"/>
-    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
     <fullyQualifiedTypeName name="javax.swing.SpringLayout"/>
+    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
+    <fullyQualifiedTypeName name="dispociones_avanzadas.VentanaDisposicionLibre"/>
+    <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="dispociones_avanzadas.PosicionPropia"/>
+    <fullyQualifiedTypeName name="dispociones_avanzadas.VentanaPosicionPropia"/>
+    <fullyQualifiedTypeName name="java.awt.LayoutManager"/>
+    <fullyQualifiedTypeName name="dispociones_avanzadas.DiagonalLayout"/>
 </qualifiedTypeNameHistroy>
