@@ -28,7 +28,6 @@ class VentanaPosicionPropia extends JFrame {
 		getContentPane().add(btnRojo);
 		getContentPane().add(btnVerde);
 		getContentPane().add(btnAzul);
-
 		setVisible(true);
 	}
 }
@@ -59,11 +58,11 @@ class DiagonalLayout implements LayoutManager {
 	public void layoutContainer(Container parent) {
 		final int SIZE = 80;
 		int numComponentes = parent.getComponentCount();
-		int espaciadoX = 10;
-		int espaciadoY = 20;
+		int espaciadoX = 50;
+		int espaciadoY = 50;
 
-		int x = (parent.getWidth() - numComponentes * SIZE) / 2;
-		int y = (parent.getHeight() - numComponentes * SIZE) / 2;
+		int x = (parent.getWidth() - (numComponentes * (SIZE + espaciadoX) - espaciadoX)) / 2;
+		int y = (parent.getHeight() - (numComponentes * (SIZE + espaciadoY) - espaciadoY)) / 2;
 
 		for (int i = 0; i < numComponentes; i++) {
 			Component c = parent.getComponent(i);
