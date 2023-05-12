@@ -6,6 +6,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\rodri\Downloads\Prueba5"/>
+			<item value="C:\Users\DAM1_Alu07\Desktop\DAM_git\Programación\Tema 1 - Introducción\Java-Eclipse\interfacesGraficas"/>
 			<item value="E:\DAM 1\Programación\Tema 1 - Introducción\Java-Eclipse\interfacesGraficas"/>
 			<item value="C:\Users\DAM1_Alu07\Desktop\DAM_git\Programación\Tema 1 - Introducción\Java-Eclipse\Examen4"/>
 			<item value="C:\Users\DAM1_Alu07\Desktop\f1_bbdd"/>

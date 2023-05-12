@@ -1,12 +1,14 @@
-<<<<<<< HEAD
 /ejerciciosV/
-/flujos/
-/AdivinaNumero.class
 /Arrays/
 /ClasesEnvoltorio/
 /Ejercicio24POO/
 /Ejercicio25POO/
 /Ejercicio26POO/
+/flujos/
+/lunna/
+/AdivinaNumero.class
+/Aleatorios.class
+/Array.class
 /Ejercicio27POO/
 /Ejercicio29POO/
 /EjerciciosPOO/
@@ -19,8 +21,6 @@
 /cajeroAutomatico/
 /clasesAbstractas/
 /clasesAnidadas/
-=======
->>>>>>> 7689d2d800cd2eccb33fa8baa1bebe3d2ab7a2b0
 /colecciones/
 /depuracion/
 /documentos/
@@ -28,25 +28,14 @@
 /ejercicio22POO/
 /ejercicio23POO/
 /ejercicio30POO/
-<<<<<<< HEAD
 /enumerados/
 /excepciones/
 /ficheros/
-=======
-/ejerciciosV/
-/enumerados/
-/excepciones/
-/ficheros/
-/flujos/
->>>>>>> 7689d2d800cd2eccb33fa8baa1bebe3d2ab7a2b0
 /intefaces/
 /intefaces2/
 /interfaces3/
-/lunna/
 /polimorfismo/
 /serializacion/
-/Aleatorios.class
-/Array.class
 /BucleFor.class
 /BucleWhile.class
 /Cadenas.class
