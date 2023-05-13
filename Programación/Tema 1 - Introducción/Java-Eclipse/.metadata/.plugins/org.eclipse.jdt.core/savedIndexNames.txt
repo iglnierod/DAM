@@ -2,13 +2,4 @@ INDEX VERSION 1.131+E:\DAM 1\Programación\Tema 1 - Introducción\Java-Eclipse\.me
 1582863768.index
 1865797976.index
 3585759780.index
-3009453861.index
 645530780.index
-<<<<<<< HEAD
-=======
-3296124434.index
-1582863768.index
-1864443622.index
-3772838084.index
-2326369150.index
->>>>>>> 3f8274660d5431a0be77598cc12006c85730eecd
