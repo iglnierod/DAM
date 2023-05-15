@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="javax.swing.text.StyledEditorKit.ForegroundAction"/>
     <fullyQualifiedTypeName name="javax.swing.JSpinner"/>
@@ -61,3 +62,6 @@
     <fullyQualifiedTypeName name="javax.swing.JFileChooser"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
 </qualifiedTypeNameHistroy>
+=======
+<qualifiedTypeNameHistroy/>
+>>>>>>> 8a0ecfa514969e947ae996f66b08628abb7df87d
