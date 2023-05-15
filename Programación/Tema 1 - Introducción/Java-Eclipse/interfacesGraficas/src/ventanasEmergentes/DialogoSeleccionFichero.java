@@ -21,6 +21,8 @@ public class DialogoSeleccionFichero {
 
 class VentanaSeleccionFichero extends JFrame {
 	private File fichero;
+	private JTextArea txaTexto;
+	private JLabel lblEstado;
 
 	public VentanaSeleccionFichero() {
 		setTitle("Selección de ficheros");
@@ -41,12 +43,12 @@ class VentanaSeleccionFichero extends JFrame {
 
 		this.add(mnbMenu, BorderLayout.NORTH);
 
-		JTextArea txaTexto = new JTextArea();
+		txaTexto = new JTextArea();
 		JScrollPane scp = new JScrollPane(txaTexto);
 
 		this.add(scp);
 
-		JLabel lblEstado = new JLabel(" ");
+		lblEstado = new JLabel(" ");
 		this.add(lblEstado, BorderLayout.SOUTH);
 
 		mniAbrir.addActionListener(new ActionListener() {
@@ -73,15 +75,15 @@ class VentanaSeleccionFichero extends JFrame {
 				guardarTextoFichero(txaTexto.getText(), fichero);
 			}
 		});
-		/*
+
 		mniGuardarComo.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				guardarComo();
 			}
 		});
-		*/
+
 		setVisible(true);
 	}
 
@@ -103,10 +105,25 @@ class VentanaSeleccionFichero extends JFrame {
 	}
 
 	private void guardarTextoFichero(String texto, File f) {
+		if (f == null)
+			guardarComo();
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(f))) {
 			bw.write(texto);
 		} catch (IOException e) {
 			e.printStackTrace();
+		}
+	}
+
+	private void guardarComo() {
+		JFileChooser fc = new JFileChooser();
+		fc.setCurrentDirectory(new File("").getAbsoluteFile());
+		int resultado = fc.showSaveDialog(VentanaSeleccionFichero.this);
+
+		if (resultado == JFileChooser.APPROVE_OPTION) {
+			fichero = fc.getSelectedFile();
+			String texto = txaTexto.getText();
+			guardarTextoFichero(texto, fichero);
+			lblEstado.setText(fichero.getAbsolutePath());
 		}
 	}
 }
