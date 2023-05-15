@@ -12,23 +12,33 @@ public class AccesoBD {
 
 			ResultSet rs = stmt.executeQuery("SELECT * FROM offices;");
 
-			while(rs.next()) {
-				for(int i = 0; i < 9; i++) {
-					String officeCode = rs.getString("officeCode");
-					String city = rs.getString("city");
-					String phone = rs.getString("phone");
-					String addressLine1 = rs.getString("addressLine1");
-					String addressLine2 = rs.getString("addressLine2");
-					String state = rs.getString("state");
-					String country = rs.getString("country");
-					String postalCode = rs.getString("postalCode");
-					String territory = rs.getString("territory");
+			while (rs.next()) {
+				String officeCode = null;
+				String city = null;
+				String phone = null;
+				String addressLine1 = null;
+				String addressLine2 = null;
+				String state = null;
+				String country = null;
+				String postalCode = null;
+				String territory = null;
+				for (int i = 0; i < 9; i++) {
+					officeCode = rs.getString("officeCode");
+					city = rs.getString("city");
+					phone = rs.getString("phone");
+					addressLine1 = rs.getString("addressLine1");
+					addressLine2 = rs.getString("addressLine2");
+					state = rs.getString("state");
+					country = rs.getString("country");
+					postalCode = rs.getString("postalCode");
+					territory = rs.getString("territory");
 				}
-				System.out.println();
+				System.out.println(officeCode + " - " + city + " - " + phone + " - " + addressLine1 + " - "
+						+ addressLine2 + " - " + state + " - " + country + " - " + postalCode + " - " + territory);
 			}
-			
+
 		} catch (SQLException e) {
-			System.err.println("Error al conectar con la BD");	
+			System.err.println("Error al conectar con la BD");
 			e.printStackTrace();
 		}
 	}
