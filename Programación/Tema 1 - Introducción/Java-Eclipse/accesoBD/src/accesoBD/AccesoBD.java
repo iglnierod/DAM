@@ -2,34 +2,49 @@ package accesoBD;
 
 import java.sql.*;
 
+import com.mysql.cj.jdbc.MysqlDataSource;
+
 public class AccesoBD {
+
 	public static void main(String[] args) {
-		try {
-			Connection con = DriverManager.getConnection("jdbc:mysql://192.168.56.21:3306/classicmodels", "progjava",
-					"J#v#Prog2023");
-
-			Statement stmt = con.createStatement();
-
-			ResultSet rs = stmt.executeQuery("SELECT * FROM offices;");
-
-			while(rs.next()) {
-				for(int i = 0; i < 9; i++) {
-					String officeCode = rs.getString("officeCode");
-					String city = rs.getString("city");
-					String phone = rs.getString("phone");
-					String addressLine1 = rs.getString("addressLine1");
-					String addressLine2 = rs.getString("addressLine2");
-					String state = rs.getString("state");
-					String country = rs.getString("country");
-					String postalCode = rs.getString("postalCode");
-					String territory = rs.getString("territory");
+//		String urlMysql = "jdbc:mysql://192.168.56.21:3306/classicmodels";
+//		String sentenciaSQL = "SELECT orderDate,shippedDate,status,comments,customerNumber FROM orders WHERE orderNumber = 10167;";
+//		try (Connection con = DriverManager.getConnection(urlMysql, "progjava", "J#v#Prog2023");
+//				Statement stmt = con.createStatement();) {
+//			try (ResultSet rs = stmt.executeQuery(sentenciaSQL)) {
+//				while (rs.next()) {
+//					System.out.println("Nº Cliente: " + rs.getString("customerNumber"));
+//					System.out.println("Estado: " + rs.getString("status"));
+//					System.out.println("Fecha pedido: " + rs.getString("orderDate"));
+//					System.out.println("Fecha envio: " + rs.getString("shippedDate"));
+//					System.out.println("Comentarios: " + rs.getString("comments"));
+//				}
+//			}
+//		} catch (SQLException e) {
+//			System.err.println("Error al conectar con la BD");
+//			e.printStackTrace();
+//		}
+	
+		// JNDI (Java Naming and Directory Interface)
+		MysqlDataSource dataSource = new MysqlDataSource();
+		dataSource.setServerName("192.168.56.21");
+		dataSource.setPort(3306);
+		dataSource.setDatabaseName("classicmodels");
+		dataSource.setUser("progjava");
+		dataSource.setPassword("J#v#Prog2023");
+		
+		if(dataSource != null) {
+			String sql = "select curdate();";
+			try(Connection con = dataSource.getConnection(); Statement stmt = con.createStatement();){
+				try(ResultSet rs = stmt.executeQuery(sql);){
+					if(rs.next())
+						System.out.println("La fecha actual es: " + rs.getDate(1));
 				}
-				System.out.println();
+			} catch (SQLException e) {
+				e.printStackTrace();
 			}
-			
-		} catch (SQLException e) {
-			System.err.println("Error al conectar con la BD");	
-			e.printStackTrace();
 		}
+		
+	
 	}
 }
