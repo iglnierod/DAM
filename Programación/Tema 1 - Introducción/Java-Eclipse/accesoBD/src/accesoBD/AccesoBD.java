@@ -10,8 +10,9 @@ public class AccesoBD {
 
 			Statement stmt = con.createStatement();
 
-			ResultSet rs = stmt.executeQuery("SELECT * FROM offices;");
+			ResultSet rs = stmt.executeQuery("SELECT * from offices;");
 
+			
 			while (rs.next()) {
 				String officeCode = null;
 				String city = null;
