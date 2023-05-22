@@ -39,12 +39,15 @@ public class ConsultasPreparadas {
 		StringBuilder sb = new StringBuilder();
 		try (Connection con = DriverManager.getConnection(URL, USUARIO, CLAVE);
 				PreparedStatement ps = con.prepareStatement(consultaSql)) {
+			int contadorRegistros = 0;
 			ps.setString(1, categoria);
 			ps.setString(2, String.valueOf(stock));
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				sb.append(rs.getString(1) + "\n");
+				contadorRegistros++;
 			}
+			VentanaConsultasPreparadas.updateLblEstado(contadorRegistros);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -58,15 +61,18 @@ public class ConsultasPreparadas {
 				PreparedStatement ps = con.prepareStatement(consultaSql)) {
 			ps.setString(1, String.valueOf(stock));
 			ResultSet rs = ps.executeQuery();
+			int contadorRegistros = 0;
 			while (rs.next()) {
 				sb.append(rs.getString(1) + "\n");
+				contadorRegistros++;
 			}
+			VentanaConsultasPreparadas.updateLblEstado(contadorRegistros);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return sb.toString();
 	}
-	
+
 	public static void main(String[] args) {
 		new VentanaConsultasPreparadas();
 	}
@@ -76,6 +82,8 @@ class VentanaConsultasPreparadas extends JFrame {
 	private JTextArea txaResultado = new JTextArea();
 	JComboBox<String> cmbCategorias = ConsultasPreparadas.getCategorias();
 	JTextField txfStock = new JTextField();
+	static JLabel lblEstado;
+	static String lblEstadoDefault;
 
 	public VentanaConsultasPreparadas() {
 		setTitle("Consultas");
@@ -97,8 +105,9 @@ class VentanaConsultasPreparadas extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					int stock = Integer.parseInt(txfStock.getText());
-					txaResultado.setText(ConsultasPreparadas.getConsulta(cmbCategorias.getSelectedItem().toString(), stock));
-					if(cmbCategorias.getSelectedItem().toString().equals("Todas")) {
+					txaResultado.setText(
+							ConsultasPreparadas.getConsulta(cmbCategorias.getSelectedItem().toString(), stock));
+					if (cmbCategorias.getSelectedItem().toString().equals("Todas")) {
 						txaResultado.setText(ConsultasPreparadas.getConsultaTodas(stock));
 					}
 				} catch (NumberFormatException ex) {
@@ -115,8 +124,18 @@ class VentanaConsultasPreparadas extends JFrame {
 		txaResultado.setFont(new Font("Arial", 0, 20));
 		scp.setBorder(new EmptyBorder(20, 10, 10, 10));
 
+		JPanel pnlSur = new JPanel(new BorderLayout());
+		pnlSur.setBorder(new EmptyBorder(0, 10, 5, 10));
+		lblEstadoDefault = "Número de registros: ";
+		lblEstado = new JLabel(lblEstadoDefault + "0");
+		pnlSur.add(lblEstado, BorderLayout.WEST);
+		this.add(pnlSur, BorderLayout.SOUTH);
 		this.add(scp);
 
 		setVisible(true);
+	}
+
+	public static void updateLblEstado(int n) {
+		lblEstado.setText(lblEstadoDefault + n);
 	}
 }
