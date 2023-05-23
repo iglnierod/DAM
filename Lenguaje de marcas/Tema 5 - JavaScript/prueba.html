@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/iglnierod/svg/main/logo.svg">
+</head>
+<body>
+    
+    <!-- HTML -->
+    <h1 id="header1">Os tres porquiños</h1>
+    <p id="p1">Soplarei e soplarei e a túa casa derribarei</p>
+    <input type="text" id="user" name="usuario" class="inputClass">
+    <p class="loop">Uno</p>
+    <p class="loop">Dos</p>
+    <p class="loop">Tres</p>
+    <p class="loop">Cuatro</p>
+    <p class="loop">Cinco</p>
+    <p class="loop">Seis</p>
+    <!-- JavaScript -->
+    <script>
+        var a = 5;
+        let b = 10;
+        const c = 15;
+        // Probar valores de variables 
+        if (true) {
+            var a = 75;
+            let b = 105;
+            const c = 500;
+            console.log(a,b,c);
+        }
+        console.log(a,b,c);
+        // getElementById
+        console.log(document.getElementById("header1").outerHTML);
+        console.log(document.getElementById("header1").innerHTML);
+        // getElementByName
+        console.log(document.getElementsByName("usuario")[0].outerHTML);
+        
+        // Bucle for
+        let elemento = document.getElementsByClassName("loop");
+        for(let i = 0; i < elemento.length; i++){
+            console.log("Elemento -->",i);
+            console.log(elemento[i].outerHTML);
+        }
+        
+        // Acceso a colección de atributos
+        for(let i = 0; i < document.getElementById("user").attributes.length; i++){
+            let elementAtt = document.getElementById("user").attributes[i];
+            console.log(elementAtt.nodeName + " -- " + elementAtt.nodeValue);
+        }
+
+        // Creación de nodos
+        let nodoElem1 = document.createElement("a");
+        nodoElem1.href = "https://www.duckduckgo.com";
+        //let nodoElem1Texto = document.createTextNode("Enlace a duckduckgo");
+        //nodoElem1.appendChild(nodoElem1Texto);
+        nodoElem1.innerText = "Enlace a duckduckgo";
+        document.body.append(nodoElem1);
+        console.log(nodoElem1.outerHTML);
+</script>
+</body>
+</html>
