@@ -71,16 +71,30 @@
   <script>
     console.log("1:");
     console.log(document.getElementsByTagName("form")[0]);
+
     console.log("2:");
     console.log(document.getElementsByClassName("btn")[0]);
+
     console.log("3:");
     console.log(document.getElementById("inputAddress").attributes[3].textContent);
+
     console.log("4:");
     console.log(document.getElementById("inputState").attributes[0].textContent);
+
     console.log("5:");
-    for(let i = 0; i < document.getElementsByTagName("label").attributes.length;i++){
-      
+    let inputElements = document.getElementsByTagName("input");
+    for (let i = 0; i < inputElements.length; i++) {
+      console.log(inputElements[i].id);
     }
+
+    console.log("6:");
+    console.log(document.getElementById("inputZip").parentNode);
+    
+    console.log("7:");
+    console.log(document.forms);
+
+    console.log("8:");
+    console.log(document.lastModified);
   </script>
 </body>
 
