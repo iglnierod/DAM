@@ -1,6 +1,7 @@
 package accesoBD;
 
 import java.sql.*;
+import javax.swing.*;
 
 public class ProcedimientosAlmacenados {
 	static final String URL = "jdbc:mysql://192.168.56.21:3306/classicmodels";
@@ -11,7 +12,17 @@ public class ProcedimientosAlmacenados {
 		mostrarEmailsEmpleadosEMEA();
 		mostrarEmailEmpleadosDeTerritorio("EMEA");
 		mostrarUltimosPagos();
+		String producto = JOptionPane.showInputDialog("Introduzca el código del producto");
+		double precio = 0;
+		try {
+			precio = Double.parseDouble(JOptionPane.showInputDialog("Introduzca el precio del producto"));
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+		}
+		actulizarPrecioProducto(producto,precio);
 	}
+
+	
 
 	private static void mostrarEmailsEmpleadosEMEA() {
 		try (Connection con = DriverManager.getConnection(URL, USUARIO, CLAVE);
@@ -48,6 +59,7 @@ public class ProcedimientosAlmacenados {
 				CallableStatement cs = con.prepareCall("{call ObtenerUltimosPagos};")) {
 			try (ResultSet rs = cs.executeQuery()) {
 				System.out.println("ULTIMOS 10 PAGOS:");
+				System.out.println("-".repeat(62));
 				double total = 0;
 				while (rs.next()) {
 					String fecha = String.format("[%1$tA %1$td de %1$tB de %1$tY]", rs.getDate(3));
@@ -57,7 +69,20 @@ public class ProcedimientosAlmacenados {
 				}
 				System.out.println("-".repeat(62));
 				System.out.printf("%51s %10.2f", "TOTAL:", total);
+				System.out.println();
 			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private static void actulizarPrecioProducto(String codigoProducto, double precio) {
+		try (Connection con = DriverManager.getConnection(URL, USUARIO, CLAVE);
+				CallableStatement cs = con.prepareCall("{call ActualizarPrecioProducto(?,?)};")) {
+			cs.setString(1, codigoProducto);
+			cs.setDouble(2, precio);
+			cs.execute();
+			System.out.println("Precio actualizado correctamente");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
