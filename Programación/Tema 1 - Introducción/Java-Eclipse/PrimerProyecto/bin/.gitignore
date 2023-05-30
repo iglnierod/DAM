@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /ejerciciosV/
 /flujos/
 /Arrays/
@@ -17,6 +18,8 @@
 /cajeroAutomatico/
 /clasesAbstractas/
 /clasesAnidadas/
+=======
+>>>>>>> 6497aadb5b505a479585b6a850bd4dd32bf96907
 /colecciones/
 /depuracion/
 /documentos/
@@ -24,6 +27,7 @@
 /ejercicio22POO/
 /ejercicio23POO/
 /ejercicio30POO/
+<<<<<<< HEAD
 /lunna/
 /AdivinaNumero.class
 /Aleatorios.class
@@ -99,4 +103,17 @@
 /PrimeraClase.class
 /Sumador.class
 /UsaSumador.class
+=======
+/ejerciciosV/
+/enumerados/
+/excepciones/
+/ficheros/
+/flujos/
+/intefaces/
+/intefaces2/
+/interfaces3/
+/lunna/
+/polimorfismo/
+/serializacion/
+>>>>>>> 6497aadb5b505a479585b6a850bd4dd32bf96907
 /test.class
