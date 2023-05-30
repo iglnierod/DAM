@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>JS 2</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/iglnierod/svg/main/logo.svg">
+    <style>
+        #header1 {
+            color: pink;
+        }
+
+        #p1 {
+            background-color: wheat;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HTML -->
+    <h1 id="header1">Os tres porquiños</h1>
+    <p id="p1">Soplarei e soplarei e a túa casa <strong>derribarei</strong></p>
+    <input type="text" id="user" name="usuario" class="inputClass">
+    <button onclick="destroyPorks()">Destruir or porcos</button>
+    <button id="destroyButton">Destruir os porcos</button>
+    <!-- JavaScript -->
+    <script>
+        // Diferencias entre outer / inner / textContent
+        console.log(document.getElementById("p1").outerHTML);
+        console.log(document.getElementById("p1").innerHTML);
+        console.log(document.getElementById("p1").textContent);
+        // Cambio de atributos
+        document.getElementById("p1").id = "p3";
+        console.log(document.getElementById("p3").outerHTML); //?
+        // Engadir contido document.write
+        document.write('<p id="p3">E a casiña derrubouse</p>');
+        // Cambio de estilo CSS
+        document.getElementById("header1").style.color = "green";
+        document.getElementsByTagName("p")[0].style.backgroundColor = "steelblue";
+        document.getElementsByTagName("p")[0].style.padding = "20px";
+        // Cambio de estilo (insertando CSS)
+        document.getElementsByTagName("p")[0].style.cssText = "background-color: lightblue;padding: 50px";
+        // Cambio de contido
+        
+        // GESTIÓN DE EVENTOS
+        // Método antiguo
+        function destroyPorks() {
+            document.getElementById("header1").innerText = "Carapuchiña Vermella";
+            document.getElementById("header1").style.color = "red";
+            document.getElementById("p3").innerHTML = "Nin porquiños nin lerias";
+            let elementP = document.getElementsByTagName("p");
+            for (let i = 0; i < elementP.length; i++) {
+                elementP[i].style.cssText = "color: white; background-color: red; padding: 50px";
+            }
+        }
+        // Manera correcta
+        document.getElementById("destroyButton").onclick = destroyPorks;
+        // EventListener
+        document.getElementById("destroyButton").addEventListener("click", destroyPorks,false);
+    </script>
+</body>
+
+</html>
