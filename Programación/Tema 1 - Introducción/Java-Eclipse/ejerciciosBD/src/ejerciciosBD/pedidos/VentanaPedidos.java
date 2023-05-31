@@ -1,14 +1,12 @@
 package ejerciciosBD.pedidos;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.LinkedList;
-
+import java.awt.event.*;
+import java.sql.*;
+import java.util.*;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
+import javax.swing.event.*;
 
 public class VentanaPedidos extends JFrame {
 	static final String URL = "jdbc:mysql://192.168.56.21:3306/classicmodels";
@@ -21,6 +19,7 @@ public class VentanaPedidos extends JFrame {
 	}
 
 	private LinkedList<Pedido> pedidos;
+	private LinkedList<Producto> productos;
 
 	public VentanaPedidos() {
 		setTitle("Pedidos");
@@ -71,7 +70,8 @@ public class VentanaPedidos extends JFrame {
 		pnlCentral1.add(scp);
 		scp = new JScrollPane(txaDatosPedidoSelec);
 		scp.setBorder(new TitledBorder("Datos pedido seleccionado"));
-		pnlCentral1.add(scp);
+		pnlDatosPedidoSelec.add(scp);
+		pnlCentral1.add(pnlDatosPedidoSelec);
 
 		// Panel central: Lineas pedido seleccionado
 		JPanel pnlCentral2 = new JPanel(new BorderLayout());
@@ -118,6 +118,56 @@ public class VentanaPedidos extends JFrame {
 				int selectedIndex = liPedido.getSelectedIndex();
 				Pedido pedidoSeleccionado = pedidos.get(selectedIndex);
 				txaDatosPedidoSelec.setText(pedidoSeleccionado.toString());
+
+				String sentenciaSQL = "SELECT od.productCode, od.quantityOrdered, od.priceEach, p.productName, p.productLine,p.productScale,"
+						+ "p.productVendor,p.productDescription,p.quantityInStock,p.buyPrice,p.msrp "
+						+ "FROM orderdetails od, products p " + "WHERE od.productCode = p.productCode "
+						+ "AND od.orderNumber = ?;";
+				int contador = 1;
+				try (Connection con = DriverManager.getConnection(URL, USUARIO, CLAVE);
+						PreparedStatement ps = con.prepareStatement(sentenciaSQL)) {
+					ps.setString(1, pedidoSeleccionado.getOrderNumber());
+					ResultSet rs = ps.executeQuery();
+					LinkedList<String> pedidosSeleccionados = new LinkedList<>();
+					while (rs.next()) {
+						String productCode = rs.getString(1);
+						int quantityOrdered = rs.getInt(2);
+						Double priceEach = rs.getDouble(3);
+						String precioTotal = String.format("%.2f", quantityOrdered * priceEach);
+						pedidosSeleccionados.add(contador + ")" + "[" + productCode + "]: " + quantityOrdered + " x "
+								+ priceEach + " = " + precioTotal);
+
+						String productName = rs.getString("productName");
+						String productLine = rs.getString("productLine");
+						String productScale = rs.getString("productScale");
+						String productVendor = rs.getString("productVendor");
+						String productDescription = rs.getString("productDescription");
+						String quantityInStock = rs.getString("quantityInStock");
+						double buyPrice = rs.getDouble("buyPrice");
+						double msrp = rs.getDouble("MSRP");
+
+//						productos.add(new Producto(productCode,productName,productLine,productScale,productVendor,productDescription,quantityInStock,buyPrice,msrp));
+						productos.add(new Producto(productCode, productName, productLine, productScale, productVendor, productDescription, quantityInStock, buyPrice, msrp));
+						contador++;
+					}
+					DefaultListModel<String> modelo = new DefaultListModel<>();
+					modelo.addAll(pedidosSeleccionados);
+					liLineasPedidoSelec.removeAll();
+					liLineasPedidoSelec.setModel(modelo);
+				} catch (SQLException e1) {
+					e1.printStackTrace();
+				}
+			}
+		});
+
+		liLineasPedidoSelec.addListSelectionListener(new ListSelectionListener() {
+
+			@Override
+			public void valueChanged(ListSelectionEvent e) {
+				int selectedIndex = liLineasPedidoSelec.getSelectedIndex();
+				Producto productoSeleccionado = productos.get(selectedIndex);
+				txaDatosProductoSelec.setText(productoSeleccionado.toString());
+
 			}
 		});
 
