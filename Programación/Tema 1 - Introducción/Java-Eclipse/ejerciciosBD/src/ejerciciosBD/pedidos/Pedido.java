@@ -3,6 +3,8 @@ package ejerciciosBD.pedidos;
 import java.sql.*;
 import java.util.LinkedList;
 
+import javax.swing.JComboBox;
+
 public class Pedido {
 	private String orderNumber;
 	private String orderDate;
@@ -11,10 +13,11 @@ public class Pedido {
 	private String status;
 	private String comments;
 	private int customerNumber;
+	private Cliente cliente;
 
 	// Constructor
 	public Pedido(String orderNumber, String orderDate, String requiredDate, String shippedDate, String status,
-			String comments, int customerNumber) {
+			String comments, int customerNumber, Cliente cliente) {
 		super();
 		this.orderNumber = orderNumber;
 		this.orderDate = orderDate;
@@ -23,6 +26,7 @@ public class Pedido {
 		this.status = status;
 		this.comments = comments;
 		this.customerNumber = customerNumber;
+		this.cliente = cliente;
 	}
 
 	// METODOS
@@ -38,29 +42,71 @@ public class Pedido {
 		return sb.toString();
 	}
 
-	public static LinkedList<Pedido> getPedidosPorFechas(String fechaInicio, String fechaFin) {
+	public static LinkedList<Pedido> getPedidosPorFechas(String fechaInicio, String fechaFin, String status) {
 		LinkedList<Pedido> pedidos = new LinkedList<>();
-		String sentenciaSQL = "SELECT * FROM orders WHERE orderDate >= ? AND orderDate <= ? ORDER BY orderNumber desc;";
+		String sentenciaSQL = "SELECT * FROM orders o, customers c WHERE o.orderDate >= ? AND o.orderDate <= ? "
+				+ "AND o.status like ? AND o.customerNumber = c.customerNumber ORDER BY o.orderNumber DESC;";
 		try (Connection con = DriverManager.getConnection(VentanaPedidos.URL, VentanaPedidos.USUARIO,
 				VentanaPedidos.CLAVE); PreparedStatement ps = con.prepareStatement(sentenciaSQL)) {
 			ps.setString(1, fechaInicio);
 			ps.setString(2, fechaFin);
+			if (status.equals("Todos"))
+				status = "%";
+			ps.setString(3, status);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
+				// PEDIDO
 				String orderNumber = rs.getString("orderNumber");
 				String orderDate = rs.getString("orderDate");
 				String requiredDate = rs.getString("requiredDate");
 				String shippedDate = rs.getString("shippedDate");
-				String status = rs.getString("status");
+				String orderStatus = rs.getString("status");
 				String comments = rs.getString("comments");
 				int customerNumber = rs.getInt("customerNumber");
-				pedidos.add(new Pedido(orderNumber, orderDate, requiredDate, shippedDate, status, comments,
-						customerNumber));
+
+				// CLIENTE
+				String customerName = rs.getString("customerName");
+				String contactLastName = rs.getString("contactLastName");
+				String contactFirstName = rs.getString("contactFirstName");
+				String phone = rs.getString("phone");
+				String addressLine1 = rs.getString("addressLine1");
+				String adressLine2 = rs.getString("addressLine2");
+				String city = rs.getString("city");
+				String state = rs.getString("state");
+				String postalCode = rs.getString("postalCode");
+				String country = rs.getString("country");
+				String salesRepEmployeeNumber = rs.getString("salesRepEmployeeNumber");
+				String creditLimit = rs.getString("creditLimit");
+
+				Cliente cliente = new Cliente(customerNumber, customerName, contactLastName, contactFirstName, phone,
+						addressLine1, adressLine2, city, state, postalCode, country, salesRepEmployeeNumber,
+						creditLimit);
+
+				pedidos.add(new Pedido(orderNumber, orderDate, requiredDate, shippedDate, orderStatus, comments,
+						customerNumber, cliente));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return pedidos;
+	}
+
+	public static JComboBox<String> getEstadosPedidos() {
+		JComboBox<String> cmb = new JComboBox<String>();
+		cmb.addItem("Todos");
+		String sentenciaSQL = "SELECT DISTINCT status FROM orders;";
+		try (Connection con = DriverManager.getConnection(VentanaPedidos.URL, VentanaPedidos.USUARIO,
+				VentanaPedidos.CLAVE); Statement stmt = con.createStatement()) {
+			ResultSet rs = stmt.executeQuery(sentenciaSQL);
+			while (rs.next()) {
+				cmb.addItem(rs.getString("status"));
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return cmb;
 	}
 
 	// GET & SET
@@ -74,6 +120,14 @@ public class Pedido {
 
 	public String getOrderDate() {
 		return orderDate;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 
 	public void setOrderDate(String orderDate) {

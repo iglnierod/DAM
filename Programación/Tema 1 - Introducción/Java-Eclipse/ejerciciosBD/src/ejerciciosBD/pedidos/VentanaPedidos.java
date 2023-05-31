@@ -19,7 +19,7 @@ public class VentanaPedidos extends JFrame {
 	}
 
 	private LinkedList<Pedido> pedidos;
-	private LinkedList<Producto> productos;
+	private LinkedList<Producto> productos = new LinkedList<>();
 
 	public VentanaPedidos() {
 		setTitle("Pedidos");
@@ -31,11 +31,10 @@ public class VentanaPedidos extends JFrame {
 		JPanel pnlNorte = new JPanel();
 		JTextField txtFechaInicio = new JTextField(6);
 		JTextField txtFechaFin = new JTextField(6);
-		JComboBox<String> cmbEstado = new JComboBox<String>();
+		JComboBox<String> cmbEstado = Pedido.getEstadosPedidos();
 		JButton btnBuscarPedidos = new JButton("Buscar pedidos");
 
 		cmbEstado.setPreferredSize(new Dimension(100, 20));
-		cmbEstado.addItem("Todos");
 
 		pnlNorte.add(new JLabel("Fecha inicio:"));
 		pnlNorte.add(txtFechaInicio);
@@ -53,11 +52,9 @@ public class VentanaPedidos extends JFrame {
 		JTextArea txaDatosPedidoSelec = new JTextArea();
 		JButton btnMostrarDatosCliente = new JButton("Mostrar datos cliente");
 		JLabel lblImporteTotal = new JLabel("Importe total:");
-		JPanel pnlDatosPedidoSelecSur = new JPanel();
+		JPanel pnlDatosPedidoSelecSur = new JPanel(new FlowLayout(FlowLayout.LEFT));
 
 		liPedido.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-//		liPedido.setBorder(new TitledBorder("Pedido"));
-//		txaDatosPedidoSelec.setBorder(new TitledBorder("Datos pedido seleccionado"));
 
 		pnlDatosPedidoSelecSur.add(btnMostrarDatosCliente);
 		pnlDatosPedidoSelecSur.add(lblImporteTotal);
@@ -76,7 +73,6 @@ public class VentanaPedidos extends JFrame {
 		// Panel central: Lineas pedido seleccionado
 		JPanel pnlCentral2 = new JPanel(new BorderLayout());
 		JList<String> liLineasPedidoSelec = new JList<>();
-//		liLineasPedidoSelec.setBorder(new TitledBorder("Líneas pedido seleccionado"));
 		scp = new JScrollPane(liLineasPedidoSelec);
 		scp.setBorder(new TitledBorder("Líneas pedido seleccionado"));
 		pnlCentral2.add(scp);
@@ -93,17 +89,27 @@ public class VentanaPedidos extends JFrame {
 		pnlCentral.add(pnlCentral3);
 		this.add(pnlNorte, BorderLayout.NORTH);
 		this.add(pnlCentral);
-
+		
+		liLineasPedidoSelec.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		txaDatosPedidoSelec.setEditable(false);
+		txaDatosProductoSelec.setEditable(false);
+		
 		// EVENTOS
 		btnBuscarPedidos.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				pedidos = Pedido.getPedidosPorFechas(txtFechaInicio.getText(), txtFechaFin.getText());
+				liPedido.setModel(new DefaultListModel<String>());
+				liLineasPedidoSelec.setModel(new DefaultListModel<String>());
+				txaDatosPedidoSelec.setText("");
+				txaDatosProductoSelec.setText("");
+				pedidos = Pedido.getPedidosPorFechas(txtFechaInicio.getText(), txtFechaFin.getText(),
+						cmbEstado.getSelectedItem().toString());
 				LinkedList<String> numerosPedidos = new LinkedList<>();
-				for (Pedido pedido : pedidos) {
-					numerosPedidos.add(pedido.getOrderNumber());
-				}
+				if (pedidos.size() > -1)
+					for (Pedido pedido : pedidos) {
+						numerosPedidos.add(pedido.getOrderNumber());
+					}
 				DefaultListModel<String> modelo = new DefaultListModel<>();
 				modelo.addAll(numerosPedidos);
 				liPedido.removeAll();
@@ -116,6 +122,8 @@ public class VentanaPedidos extends JFrame {
 			@Override
 			public void valueChanged(ListSelectionEvent e) {
 				int selectedIndex = liPedido.getSelectedIndex();
+				if (selectedIndex < 0)
+					return;
 				Pedido pedidoSeleccionado = pedidos.get(selectedIndex);
 				txaDatosPedidoSelec.setText(pedidoSeleccionado.toString());
 
@@ -129,13 +137,15 @@ public class VentanaPedidos extends JFrame {
 					ps.setString(1, pedidoSeleccionado.getOrderNumber());
 					ResultSet rs = ps.executeQuery();
 					LinkedList<String> pedidosSeleccionados = new LinkedList<>();
+					productos = new LinkedList<>();
+					double precioTotal = 0;
 					while (rs.next()) {
 						String productCode = rs.getString(1);
 						int quantityOrdered = rs.getInt(2);
 						Double priceEach = rs.getDouble(3);
-						String precioTotal = String.format("%.2f", quantityOrdered * priceEach);
+						double precio = quantityOrdered * priceEach;
 						pedidosSeleccionados.add(contador + ")" + "[" + productCode + "]: " + quantityOrdered + " x "
-								+ priceEach + " = " + precioTotal);
+								+ priceEach + " = " + String.format("%1.2f", precio) + " €");
 
 						String productName = rs.getString("productName");
 						String productLine = rs.getString("productLine");
@@ -146,10 +156,12 @@ public class VentanaPedidos extends JFrame {
 						double buyPrice = rs.getDouble("buyPrice");
 						double msrp = rs.getDouble("MSRP");
 
-//						productos.add(new Producto(productCode,productName,productLine,productScale,productVendor,productDescription,quantityInStock,buyPrice,msrp));
-						productos.add(new Producto(productCode, productName, productLine, productScale, productVendor, productDescription, quantityInStock, buyPrice, msrp));
+						productos.add(new Producto(productCode, productName, productLine, productScale, productVendor,
+								productDescription, quantityInStock, buyPrice, msrp));
 						contador++;
+						precioTotal += precio;
 					}
+					lblImporteTotal.setText("Importe total: " + String.format("%1.2f", precioTotal) + " €");
 					DefaultListModel<String> modelo = new DefaultListModel<>();
 					modelo.addAll(pedidosSeleccionados);
 					liLineasPedidoSelec.removeAll();
@@ -164,10 +176,25 @@ public class VentanaPedidos extends JFrame {
 
 			@Override
 			public void valueChanged(ListSelectionEvent e) {
-				int selectedIndex = liLineasPedidoSelec.getSelectedIndex();
-				Producto productoSeleccionado = productos.get(selectedIndex);
-				txaDatosProductoSelec.setText(productoSeleccionado.toString());
 
+				int selectedIndex = liLineasPedidoSelec.getSelectedIndex();
+				if (selectedIndex > -1) {
+					Producto productoSeleccionado = productos.get(selectedIndex);
+					txaDatosProductoSelec.setText(productoSeleccionado.toString());
+				}
+			}
+		});
+
+		btnMostrarDatosCliente.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int selectedIndex = liPedido.getSelectedIndex();
+				if (selectedIndex < 0)
+					return;
+				Cliente clienteDelPedido = pedidos.get(selectedIndex).getCliente();
+				JOptionPane.showMessageDialog(VentanaPedidos.this, clienteDelPedido,
+						"Datos cliente pedido seleccionado", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 
