@@ -16,6 +16,7 @@ public class VentanaPedidos extends JFrame {
 	// MAIN
 	public static void main(String[] args) {
 		new VentanaPedidos();
+		System.out.println("test");
 	}
 
 	private LinkedList<Pedido> pedidos;
